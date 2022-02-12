@@ -34,4 +34,4 @@ This function executes the build
 
 #### Defined in
 
-[build.ts:14](https://github.com/DooomiT/ros2-cli/blob/6de9616/src/commands/build.ts#L14)
+[build.ts:14](https://github.com/DooomiT/ros2-cli/blob/b82e984/src/commands/build.ts#L14)
