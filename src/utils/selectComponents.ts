@@ -13,7 +13,9 @@ export async function selectComponents(components: any): Promise<any> {
       return {name: component.name, value: component};
     }),
     result(names:any) {
-      return this.map(names);
+      const componentsMap = this.map(names);
+      const componentsList = Object.values(componentsMap);
+      return componentsList;
     },
   });
   await prompt.run()

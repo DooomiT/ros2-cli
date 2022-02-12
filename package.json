@@ -37,5 +37,9 @@
     "commander": "^9.0.0",
     "enquirer": "^2.3.6",
     "yaml": "^1.10.2"
-  }
+  },
+  "files": [
+    "src",
+    "!src/**/*.test.ts"
+  ]
 }
