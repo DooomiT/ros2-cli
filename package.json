@@ -13,7 +13,7 @@
     "clean": "tsc --build --clean",
     "lint": "npx eslint",
     "test": "mocha -r ts-node/register src/**/*.test.ts",
-    "generate-docs": "typedoc --out docs src/index.ts"
+    "generate-docs": "typedoc"
   },
   "keywords": [],
   "author": "",
