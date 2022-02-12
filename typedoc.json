@@ -4,5 +4,5 @@
         "./src/commands/run.ts",
         "./src/commands/build.ts"
     ],
-    "out": "docs/typedoc"
+    "out": "docs/content/typedoc"
 }
