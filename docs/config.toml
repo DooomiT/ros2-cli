@@ -2,7 +2,7 @@ baseURL = "https://dooomit.github.io/ros2-cli"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
-title = "ROS2 CLI Documentation"
+title = "ROS2 CLI"
 theme = "docdock"
 pygmentsCodeFences = true
 pygmentsStyle = "monokailight"
