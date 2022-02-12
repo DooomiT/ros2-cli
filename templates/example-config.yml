@@ -1,0 +1,11 @@
+name: my-example-config
+common:
+  pythonCommand: python3
+  pythonVersion: 3.9.10
+components:
+  - name: baseSubscriber
+    path: components/baseSubscriber
+    runCommand: ros2 run baseSubscriber -v
+  - name: basePublisher
+    path: components/basePublisher
+    runCommand: ros2 run basePublisher -v
