@@ -1,4 +1,5 @@
 import {readYAML} from '../utils/readYAML';
+import {selectComponents} from '../utils/selectComponents';
 import {spawnCommand} from '../utils/spawnCommand';
 import {validateEnvironment} from '../utils/validateEnvironment';
 
@@ -27,7 +28,9 @@ export async function run(configPath: string, options: any) {
     }
     console.info('build environment is available'.green);
   }
-  await Promise.all(configData.components.map(async (component: any) => {
+
+  const usedComponents = options.interactive ? await selectComponents(configData.components) : configData.components;
+  await Promise.all(usedComponents.map(async (component: any) => {
     const {name, outputPath, program} = component;
     const relCommand = `./bin/${program}`;
     if (component.args) {
