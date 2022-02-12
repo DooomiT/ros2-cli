@@ -4,8 +4,9 @@ import {spawnCommand} from './spawnCommand';
  * This function provides a default callback
  * @param {string} scriptOutput - output of the script
  * @param {number} code - exit code of the script
+ * @param {string} name - name of the executed command
  */
-function defaultCallback(scriptOutput: string, code:number) {
+function defaultCallback(scriptOutput: string, code:number, name?: string) {
   console.info(`terminated with ${code}`);
 }
 
@@ -42,7 +43,7 @@ export async function validateEnvironment(
 
   if (pythonVersion) {
     await spawnCommand(`${pythonCommand}`,
-        function(scriptOutput: string, code:number) {
+        function(scriptOutput: string, code:number, name?: string) {
           if (scriptOutput !== pythonVersion) {
             throw new Error(`python version required: ${pythonVersion} used: ${scriptOutput}`);
           }

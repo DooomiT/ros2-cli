@@ -61,6 +61,6 @@ export async function spawnCommand(
     if (outputPath) {
       await writeFile(outputFile, scriptOutput);
     }
-    callback(scriptOutput, code);
+    callback(scriptOutput, code, name);
   });
 };

@@ -2,3 +2,4 @@ node_modules/
 components/
 templates/config.yml
 dist
+bin/

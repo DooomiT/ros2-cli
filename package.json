@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
+  "bin": {
+    "ros2-cli": "./dist/index.js"
+  },
   "scripts": {
     "debug": "npx ts-node src/index.ts run -n templates/config.yml",
     "prepare": "husky install",
-    "build": "npx tsc",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
     "lint": "npx eslint"
   },
   "keywords": [],

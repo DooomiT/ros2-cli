@@ -6,10 +6,10 @@ import {validateEnvironment} from '../utils/validateEnvironment';
  *
  * @param {string} scriptOutput - output of the script
  * @param {number} code - exit code of the script
+ * @param {string} name - name of the executed command
  */
-function componentCallback(scriptOutput: string, code:number) {
-  console.debug(scriptOutput);
-  console.info(`terminated with ${code}`);
+function componentCallback(scriptOutput: string, code:number, name?:string) {
+  console.info(`${name} terminated with ${code}`);
 }
 
 /**

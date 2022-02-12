@@ -1,3 +1,4 @@
+#!/usr/bin/env ts-node
 import {build} from './commands/build';
 import {createCommand} from 'commander';
 import {exit} from 'process';
