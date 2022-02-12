@@ -1,7 +1,8 @@
 import {build} from './commands/build';
 import {createCommand} from 'commander';
-import Colors = require('colors.ts');
 import {exit} from 'process';
+import {run} from './commands/run';
+import Colors = require('colors.ts');
 Colors.enable();
 
 const withErrors = (command: (...args: any) => Promise<void>)=> {
@@ -29,6 +30,12 @@ program.command('build')
     .argument('[config]', 'Configuration file describing the build')
     .option('-n, --no-validation', 'ignore validation of build environment')
     .action(withErrors(build));
+
+program.command('run')
+    .description('Run the ros2 nodes')
+    .argument('[config]', 'Configuration file describing the components')
+    .option('-n, --no-validation', 'ignore validation of build environment')
+    .action(withErrors(run));
 
 program
     .configureOutput({

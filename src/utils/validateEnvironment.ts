@@ -1,6 +1,15 @@
 import {spawnCommand} from './spawnCommand';
 
 /**
+ * This function provides a default callback
+ * @param {string} scriptOutput - output of the script
+ * @param {number} code - exit code of the script
+ */
+function defaultCallback(scriptOutput: string, code:number) {
+  console.info(`terminated with ${code}`);
+}
+
+/**
  * This function checks if all required binaries for build are available
  *
  * @param {string} [pythonCommand] - the command used to execute python
@@ -14,7 +23,7 @@ export async function validateEnvironment(
     pythonVersion?: string,
 ) {
   try {
-    await spawnCommand('ros2');
+    await spawnCommand('ros2', defaultCallback);
   } catch (error: unknown) {
     if (error instanceof Error) {
       throw new Error(`${error.message}Try source /opt/ros2/setup.bash`);
@@ -23,7 +32,7 @@ export async function validateEnvironment(
   console.info('ros2 is installed'.green);
 
   try {
-    await spawnCommand('colcon');
+    await spawnCommand('colcon', defaultCallback);
   } catch (error: unknown) {
     if (error instanceof Error) {
       throw new Error(`${error.message}`);
@@ -32,11 +41,14 @@ export async function validateEnvironment(
   console.info('colcon is installed'.green);
 
   if (pythonVersion) {
-    const result: string = await spawnCommand(`${pythonCommand} --version`);
-    if (result !== pythonVersion) {
-      throw new Error(`python version required: ${pythonVersion} used: ${result}`);
-    }
-    console.info('Python is installed'.green);
+    await spawnCommand(`${pythonCommand}`,
+        function(scriptOutput: string, code:number) {
+          if (scriptOutput !== pythonVersion) {
+            throw new Error(`python version required: ${pythonVersion} used: ${scriptOutput}`);
+          }
+          console.info('Python is installed'.green);
+        },
+        ['--version']);
   }
   return;
 }

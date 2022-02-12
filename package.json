@@ -4,7 +4,7 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "debug": "npx ts-node src/index.ts build -n templates/example-config.yml",
+    "debug": "npx ts-node src/index.ts run -n templates/config.yml",
     "prepare": "husky install",
     "build": "npx tsc",
     "lint": "npx eslint"

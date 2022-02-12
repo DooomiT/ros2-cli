@@ -4,8 +4,12 @@ common:
   pythonVersion: 3.9.10
 components:
   - name: baseSubscriber
-    path: components/baseSubscriber
-    runCommand: ros2 run baseSubscriber -v
+    outputPath: components/baseSubscriber
+    program: baseSubscriber.sh
+    args:
+      - -v
   - name: basePublisher
-    path: components/basePublisher
-    runCommand: ros2 run basePublisher -v
+    outputPath: components/basePublisher
+    program: basePublisher.sh
+    args:
+      - -v

@@ -1,4 +1,5 @@
 import {readFile} from 'fs/promises';
+import {pathExists} from './pathExists';
 import YAML from 'yaml';
 
 /**
@@ -10,7 +11,10 @@ import YAML from 'yaml';
  *     readYaml('./myFile')
  */
 export async function readYAML(path: string) {
-  const file = await readFile(path, 'utf8');
-  const data = YAML.parse(file);
-  return data;
+  if (await pathExists(path)) {
+    const file = await readFile(path, 'utf8');
+    const data = YAML.parse(file);
+    return data;
+  }
+  throw new Error(`${path} does not exist`);
 }
