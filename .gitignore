@@ -3,3 +3,4 @@ components/
 templates/config.yml
 dist
 bin/
+docs/public/
