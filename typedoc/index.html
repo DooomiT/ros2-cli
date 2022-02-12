@@ -1,0 +1,173 @@
+<!doctype html><html>
+<head>
+<title>ROS2 CLI Documentation</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name=revised content="2022-02-12T19:52:46 UTC">
+<title>Readme :: ROS2 CLI Documentation</title>
+<link rel="shortcut icon" href=/ros2-cli/images/favicon.png type=image/x-icon>
+<link href=/ros2-cli/css/nucleus.css rel=stylesheet>
+<link href=/ros2-cli/css/font-awesome.min.css rel=stylesheet>
+<link href=/ros2-cli/css/featherlight.min.css rel=stylesheet>
+<link href=/ros2-cli/css/auto-complete.css rel=stylesheet>
+<link href=/ros2-cli/theme-flex/style.css rel=stylesheet>
+<link rel=stylesheet href=/ros2-cli/css/bootstrap.min.css>
+<meta name=description content>
+</head>
+<body data-url=/ros2-cli/typedoc/>
+<header>
+<div class=logo>
+<a class=baselink href=https://dooomit.github.io/ros2-cli>ROS2 CLI Documentation</a>
+</div>
+<div class=burger><a href=javascript:void(0); style=font-size:15px>&#9776;</a></div>
+<nav class=shortcuts>
+<li role>
+<a href=https://github.com/vjeantet/hugo-theme-docdock rel=noopener>
+<i class="fa fa-github"></i> <label>Github repo</label>
+</a>
+</li>
+<li role>
+<a href=https://github.com/vjeantet/hugo-theme-docdock/archive/master.zip rel=noopener>
+<i class="fa fa-cloud-download"></i> <label>Download</label>
+</a>
+</li>
+<li role>
+<a href=https://gohugo.io/ rel=noopener>
+<i class="fa fa-bookmark"></i> <label>Hugo Documentation</label>
+</a>
+</li>
+<li role>
+<a href=/ros2-cli/credits rel=noopener>
+<i class="fa fa-bullhorn"></i> <label>Credits</label>
+</a>
+</li>
+</nav>
+</header>
+<article>
+<aside>
+<ul class=menu>
+<li data-nav-id=/ros2-cli/ class=dd-item>
+<a href=/ros2-cli/>
+<i class="fa fa-fw fa-home"></i>
+</a>
+</li>
+<li data-nav-id=https://dooomit.github.io/ros2-cli/typedoc/ class="dd-item haschildren">
+<div>
+<a href=/ros2-cli/typedoc/>Readme</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+</div>
+<ul>
+<li data-nav-id=https://dooomit.github.io/ros2-cli/typedoc/modules/ class="dd-item haschildren">
+<div>
+<a href=/ros2-cli/typedoc/modules/>Modules</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+</div>
+<ul>
+<li data-nav-id=https://dooomit.github.io/ros2-cli/typedoc/modules/commands_build/ class=dd-item>
+<div>
+<a href=/ros2-cli/typedoc/modules/commands_build/>
+commands/build
+</a><i class="fa fa-circle-thin read-icon"></i>
+</div>
+</li>
+<li data-nav-id=https://dooomit.github.io/ros2-cli/typedoc/modules/commands_run/ class=dd-item>
+<div>
+<a href=/ros2-cli/typedoc/modules/commands_run/>
+commands/run
+</a><i class="fa fa-circle-thin read-icon"></i>
+</div>
+</li>
+</ul>
+</li>
+<li data-nav-id=https://dooomit.github.io/ros2-cli/typedoc/modules/ class=dd-item>
+<div>
+<a href=/ros2-cli/typedoc/modules/>
+ros2-cli
+</a><i class="fa fa-circle-thin read-icon"></i>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<section>
+</section>
+</aside>
+<section class=page>
+<div class=nav-select>
+<center>Navigation :
+<select onchange="location.href=this.value"><option value=/ros2-cli/typedoc/ selected>
+Readme</option><option value=/ros2-cli/typedoc/modules/>
+-
+Modules</option><option value=/ros2-cli/typedoc/modules/>- ros2-cli</option></select>
+</center>
+</div>
+<div>
+<div class=searchbox>
+<input data-search-input id=search-by type=text placeholder=Search...>
+</div>
+</div>
+<h1>Readme</h1>
+<h1 id=ros2-cli>ros2-cli</h1>
+<p>This program provides a cli to build and run multiple ros2 nodes.</p>
+<h2 id=setup>Setup</h2>
+<ul>
+<li><code>git clone https://github.com/DooomiT/ros2-cli</code></li>
+<li><code>cd ros2-cli</code></li>
+<li><code>npm install</code></li>
+<li><code>npm i typescript ts-node -g</code></li>
+<li><code>npm run build</code></li>
+<li><code>npm i -g</code></li>
+<li>setup your ros project in following filestructure:</li>
+</ul>
+<pre tabindex=0><code>project
+│   config.yml    
+│
+└───components
+│   │   
+│   └───Node1
+│   │   └───  ... sourcecode of Node1 &amp; ros stuff
+│   │    
+│   └───Node2
+│   │   └───  ... sourcecode of Node1 &amp; ros stuff
+│   │   
+│   └───...
+│
+└───bin
+    │   executeNode1.sh
+    │   executeNode2.sh
+    │   ...
+</code></pre><ul>
+<li>run <code>ros2-cli ...</code></li>
+</ul>
+<h2 id=development>Development</h2>
+<h2 id=contribution>Contribution</h2>
+<ul>
+<li>contributions via PR are welcome</li>
+</ul>
+<div class=chevrons>
+<div id=navigation>
+<a class="nav nav-prev" href=/ros2-cli/ title="ROS2 CLI Documentation"> <i class="fa fa-chevron-left"></i><label>ROS2 CLI Documentation</label></a>
+<a class="nav nav-next" href=/ros2-cli/typedoc/modules/ title=Modules style=margin-right:0><label>Modules</label><i class="fa fa-chevron-right"></i></a></div>
+</div>
+</section>
+</article>
+<footer>
+<div class=footline>
+<div class=github-link>
+<a href=https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/typedoc/_index.md target=blank><i class="fa fa-code-fork"></i>
+Improve this page</a>
+</div>
+</div>
+<div>
+Create a content/_footer.md file to customize the footer content
+</div>
+</footer>
+<script src=/ros2-cli/js/jquery-2.x.min.js></script>
+<script type=text/javascript>var baseurl="https://dooomit.github.io/ros2-cli"</script>
+<script src=/ros2-cli/js/clipboard.min.js></script>
+<script src=/ros2-cli/js/featherlight.min.js></script>
+<script type=text/javascript src=/ros2-cli/js/lunr.min.js></script>
+<script type=text/javascript src=/ros2-cli/js/auto-complete.js></script>
+<script type=text/javascript src=/ros2-cli/js/search.js></script>
+<script src=/ros2-cli/theme-flex/script.js></script>
+<script src=https://dooomit.github.io/ros2-cli/js/scripts.min.js></script>
+</body>
+</html>
