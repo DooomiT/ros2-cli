@@ -70,12 +70,7 @@ This is the multi-page printable view of this section.
 </div>
 <h1 class=title>Readme</h1>
 <ul>
-<li>1: <a href=#pg-d4bfa2c520a59de0c1056a937fd25a4c>Modules</a></li>
-<ul>
-<li>1.1: <a href=#pg-6b5c1f57b9c4a70dda2ec3d0415fa5db>Module: commands/build</a></li>
-<li>1.2: <a href=#pg-eb62385cb83e3cc262a6ad7f83005782>Module: commands/run</a></li>
-</ul>
-<li>2: <a href=#pg-73a5a3d1b02aa7d44aefc8444ab2f7cd>ros2-cli</a></li>
+<li>1: <a href=#pg-73a5a3d1b02aa7d44aefc8444ab2f7cd>ros2-cli - v1.0.0</a></li>
 </ul>
 <div class=content>
 <h1 id=ros2-cli>ros2-cli</h1>
@@ -118,14 +113,17 @@ This is the multi-page printable view of this section.
 </div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-d4bfa2c520a59de0c1056a937fd25a4c>1 - Modules</h1>
-</div>
-<div class=td-content>
-<h1 id=pg-6b5c1f57b9c4a70dda2ec3d0415fa5db>1.1 - Module: commands/build</h1>
+<h1 id=pg-73a5a3d1b02aa7d44aefc8444ab2f7cd>1 - ros2-cli - v1.0.0</h1>
 <h2 id=table-of-contents>Table of contents</h2>
 <h3 id=functions>Functions</h3>
 <ul>
-<li><a href=commands_build.md#build>build</a></li>
+<li><a href=modules.md#build>build</a></li>
+<li><a href=modules.md#pathexists>pathExists</a></li>
+<li><a href=modules.md#readyaml>readYAML</a></li>
+<li><a href=modules.md#run>run</a></li>
+<li><a href=modules.md#selectcomponents>selectComponents</a></li>
+<li><a href=modules.md#spawncommand>spawnCommand</a></li>
+<li><a href=modules.md#validateenvironment>validateEnvironment</a></li>
 </ul>
 <h2 id=functions-1>Functions</h2>
 <h3 id=build>build</h3>
@@ -158,19 +156,68 @@ build('./config')</p>
 <h4 id=returns>Returns</h4>
 <p><code>Promise</code>&lt;<code>void</code>></p>
 <h4 id=defined-in>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/99e3a4f/src/commands/build.ts#L14>build.ts:14</a></p>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-eb62385cb83e3cc262a6ad7f83005782>1.2 - Module: commands/run</h1>
-<h2 id=table-of-contents>Table of contents</h2>
-<h3 id=functions>Functions</h3>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/f3603df/src/commands/build.ts#L14>commands/build.ts:14</a></p>
+<hr>
+<h3 id=pathexists>pathExists</h3>
+<p>▸ <strong>pathExists</strong>(<code>path</code>): <code>Promise</code>&lt;<code>boolean</code>></p>
+<p>checks if a path exists</p>
+<h4 id=parameters-1>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Name</th>
+<th style=text-align:left>Type</th>
+<th style=text-align:left>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>path</code></td>
+<td style=text-align:left><code>string</code></td>
+<td style=text-align:left>path to check</td>
+</tr>
+</tbody>
+</table>
+<h4 id=returns-1>Returns</h4>
+<p><code>Promise</code>&lt;<code>boolean</code>></p>
 <ul>
-<li><a href=commands_run.md#run>run</a></li>
+<li>The output of the command</li>
 </ul>
-<h2 id=functions-1>Functions</h2>
+<h4 id=defined-in-1>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/f3603df/src/utils/pathExists.ts#L8>utils/pathExists.ts:8</a></p>
+<hr>
+<h3 id=readyaml>readYAML</h3>
+<p>▸ <strong>readYAML</strong>(<code>path</code>): <code>Promise</code>&lt;<code>any</code>></p>
+<p><strong><code>example</code></strong>
+readYaml('./myFile')</p>
+<h4 id=parameters-2>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Name</th>
+<th style=text-align:left>Type</th>
+<th style=text-align:left>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>path</code></td>
+<td style=text-align:left><code>string</code></td>
+<td style=text-align:left>location of file to read</td>
+</tr>
+</tbody>
+</table>
+<h4 id=returns-2>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>></p>
+<ul>
+<li>parsed file content</li>
+</ul>
+<h4 id=defined-in-2>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/f3603df/src/utils/readYAML.ts#L13>utils/readYAML.ts:13</a></p>
+<hr>
 <h3 id=run>run</h3>
 <p>▸ <strong>run</strong>(<code>configPath</code>, <code>options</code>): <code>Promise</code>&lt;<code>void</code>></p>
-<h4 id=parameters>Parameters</h4>
+<h4 id=parameters-3>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -192,19 +239,115 @@ build('./config')</p>
 </tr>
 </tbody>
 </table>
-<h4 id=returns>Returns</h4>
+<h4 id=returns-3>Returns</h4>
 <p><code>Promise</code>&lt;<code>void</code>></p>
-<h4 id=defined-in>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/99e3a4f/src/commands/run.ts#L21>run.ts:21</a></p>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-73a5a3d1b02aa7d44aefc8444ab2f7cd>2 - ros2-cli</h1>
-<h2 id=table-of-contents>Table of contents</h2>
-<h3 id=modules>Modules</h3>
+<h4 id=defined-in-3>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/f3603df/src/commands/run.ts#L21>commands/run.ts:21</a></p>
+<hr>
+<h3 id=selectcomponents>selectComponents</h3>
+<p>▸ <strong>selectComponents</strong>(<code>components</code>): <code>Promise</code>&lt;<code>any</code>></p>
+<p>Provides a interactive prompt to select components</p>
+<h4 id=parameters-4>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Name</th>
+<th style=text-align:left>Type</th>
+<th style=text-align:left>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>components</code></td>
+<td style=text-align:left><code>any</code></td>
+<td style=text-align:left>list of components</td>
+</tr>
+</tbody>
+</table>
+<h4 id=returns-4>Returns</h4>
+<p><code>Promise</code>&lt;<code>any</code>></p>
+<h4 id=defined-in-4>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/f3603df/src/utils/selectComponents.ts#L7>utils/selectComponents.ts:7</a></p>
+<hr>
+<h3 id=spawncommand>spawnCommand</h3>
+<p>▸ <strong>spawnCommand</strong>(<code>command</code>, <code>callback</code>, <code>args?</code>, <code>name?</code>, <code>outputPath?</code>): <code>Promise</code>&lt;<code>void</code>></p>
+<p>This function spawns a shell executing a program</p>
+<p><strong><code>example</code></strong></p>
+<pre><code>spawnCommand('cat myFile', myCallback(), ['--verbose'], 'myCommand', 'logs')
+</code></pre>
+<h4 id=parameters-5>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Name</th>
+<th style=text-align:left>Type</th>
+<th style=text-align:left>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>command</code></td>
+<td style=text-align:left><code>string</code></td>
+<td style=text-align:left>The command to execute</td>
+</tr>
+<tr>
+<td style=text-align:left><code>callback</code></td>
+<td style=text-align:left><code>Function</code></td>
+<td style=text-align:left>Invoked after the command closes</td>
+</tr>
+<tr>
+<td style=text-align:left><code>args?</code></td>
+<td style=text-align:left><code>string</code>[]</td>
+<td style=text-align:left>-</td>
+</tr>
+<tr>
+<td style=text-align:left><code>name?</code></td>
+<td style=text-align:left><code>string</code></td>
+<td style=text-align:left>-</td>
+</tr>
+<tr>
+<td style=text-align:left><code>outputPath?</code></td>
+<td style=text-align:left><code>string</code></td>
+<td style=text-align:left>-</td>
+</tr>
+</tbody>
+</table>
+<h4 id=returns-5>Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>></p>
 <ul>
-<li><a href=modules/commands_build.md>commands/build</a></li>
-<li><a href=modules/commands_run.md>commands/run</a></li>
+<li>The output of the command</li>
 </ul>
+<h4 id=defined-in-5>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/f3603df/src/utils/spawnCommand.ts#L20>utils/spawnCommand.ts:20</a></p>
+<hr>
+<h3 id=validateenvironment>validateEnvironment</h3>
+<p>▸ <strong>validateEnvironment</strong>(<code>pythonCommand?</code>, <code>pythonVersion?</code>): <code>Promise</code>&lt;<code>void</code>></p>
+<p>This function checks if all required binaries for build are available</p>
+<p><strong><code>example</code></strong>
+validateEnvironment(')</p>
+<h4 id=parameters-6>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Name</th>
+<th style=text-align:left>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>pythonCommand?</code></td>
+<td style=text-align:left><code>string</code></td>
+</tr>
+<tr>
+<td style=text-align:left><code>pythonVersion?</code></td>
+<td style=text-align:left><code>string</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id=returns-6>Returns</h4>
+<p><code>Promise</code>&lt;<code>void</code>></p>
+<h4 id=defined-in-6>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/f3603df/src/utils/validateEnvironment.ts#L22>utils/validateEnvironment.ts:22</a></p>
 </div>
 </main>
 </div>
