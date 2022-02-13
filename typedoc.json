@@ -1,8 +1,16 @@
 {
     "entryPoints": [
-        "./src/index.ts",
-        "./src/commands/run.ts",
-        "./src/commands/build.ts"
+        "./src"
     ],
-    "out": "docs/content/docs/typedoc"
+    "entryPointStrategy": "expand",
+    "emit": "both",
+    "includeVersion": true,
+    "out": "docs/content/docs/typedoc",
+    "theme": "hugo",
+    "plugin": [
+        "typedoc-plugin-markdown",
+        "typedoc-plugin-inline-sources",
+        "typedoc-hugo-theme",
+        "typedoc-plugin-merge-modules"
+    ]
 }

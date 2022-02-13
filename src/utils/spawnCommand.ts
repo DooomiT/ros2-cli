@@ -4,7 +4,7 @@ import {pathExists} from './pathExists';
 import {writeFile, mkdir} from 'fs/promises';
 
 /**
- * This function spawns a shell executing a command
+ * This function spawns a shell executing a program
  *
  * @param {string} command - The command to execute
  * @param {Function} callback - Invoked after the command closes

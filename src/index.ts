@@ -26,6 +26,20 @@ program
     .description('CLI to build and run multi node ros2 projects')
     .version('1.0.0');
 
+/**
+ *
+ * Usage: `ros2-cli build [options] [config]`
+ *
+ * @source Build the ros2 nodes with colcon
+ *
+ * Arguments:
+ *   `config`               Configuration file describing the build
+ *
+ * Options:
+ *   `-n, --no-validation`  ignore validation of build environment
+ *   `-i, --interactive`    run with interactive prompts (default: true)
+ *   `-h, --help`           display help for command
+ */
 program.command('build')
     .description('Build the ros2 nodes with colcon')
     .argument('[config]', 'Configuration file describing the build')
@@ -33,6 +47,19 @@ program.command('build')
     .option('-i, --interactive', 'run with interactive prompts', true)
     .action(withErrors(build));
 
+/**
+ * Usage: `ros2-cli run [options] [config]`
+ *
+ * @source Run the ros2 nodes
+ *
+ * Arguments:
+ *   `config`               Configuration file describing the components
+ *
+ * Options:
+ *   *-n, --no-validation`  ignore validation of build environment
+ *   `-i, --interactive`    run with interactive prompts (default: true)
+ *   `-h, --help`           display help for command
+ */
 program.command('run')
     .description('Run the ros2 nodes')
     .argument('[config]', 'Configuration file describing the components')
