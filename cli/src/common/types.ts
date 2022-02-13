@@ -28,6 +28,7 @@ export type Options = {
  * @param {string} [outputPath] - Path where the log will be saved to
  * @param {Function(string, string, SpawnCommandOptions)} errorCallback
  * Invoked after the command execution stops on error
+ * @param {boolean} restartOnError - specifies if the command should be reexecuted on error
  */
 export interface SpawnCommandOptions {
     command: string,

@@ -12,6 +12,8 @@ jobs:
     defaults:
       run:
         shell: bash
+    env:
+      working_directory: cli
 
     steps:
       - uses: actions/checkout@v2
@@ -45,6 +47,7 @@ jobs:
           npm install -g autoprefixer
           cd docs
           hugo --minify
+        working-directory: ${{ env.working_directory }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

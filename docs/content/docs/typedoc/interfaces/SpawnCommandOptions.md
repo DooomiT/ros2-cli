@@ -19,6 +19,8 @@ defines the input for spawnCommand
 **`param`**
 Invoked after the command execution stops on error
 
+**`param`** specifies if the command should be reexecuted on error
+
 ## Table of contents
 
 ### Properties
@@ -39,7 +41,7 @@ Invoked after the command execution stops on error
 
 #### Defined in
 
-[common/types.ts:35](https://github.com/DooomiT/ros2-cli/blob/cffbfdc/src/common/types.ts#L35)
+common/types.ts:36
 
 ___
 
@@ -49,7 +51,7 @@ ___
 
 #### Defined in
 
-[common/types.ts:34](https://github.com/DooomiT/ros2-cli/blob/cffbfdc/src/common/types.ts#L34)
+common/types.ts:35
 
 ___
 
@@ -59,7 +61,7 @@ ___
 
 #### Defined in
 
-[common/types.ts:33](https://github.com/DooomiT/ros2-cli/blob/cffbfdc/src/common/types.ts#L33)
+common/types.ts:34
 
 ___
 
@@ -69,7 +71,7 @@ ___
 
 #### Defined in
 
-[common/types.ts:38](https://github.com/DooomiT/ros2-cli/blob/cffbfdc/src/common/types.ts#L38)
+common/types.ts:39
 
 ___
 
@@ -79,7 +81,7 @@ ___
 
 #### Defined in
 
-[common/types.ts:36](https://github.com/DooomiT/ros2-cli/blob/cffbfdc/src/common/types.ts#L36)
+common/types.ts:37
 
 ___
 
@@ -89,7 +91,7 @@ ___
 
 #### Defined in
 
-[common/types.ts:37](https://github.com/DooomiT/ros2-cli/blob/cffbfdc/src/common/types.ts#L37)
+common/types.ts:38
 
 ___
 
@@ -99,4 +101,4 @@ ___
 
 #### Defined in
 
-[common/types.ts:39](https://github.com/DooomiT/ros2-cli/blob/cffbfdc/src/common/types.ts#L39)
+common/types.ts:40
