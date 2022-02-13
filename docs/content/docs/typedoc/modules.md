@@ -6,6 +6,10 @@ slug: "modules"
 
 ## Table of contents
 
+### Interfaces
+
+- [SpawnCommandOptions](interfaces/SpawnCommandOptions.md)
+
 ### Type aliases
 
 - [Component](modules.md#component)
@@ -37,10 +41,11 @@ defines the structure of components
 | `name` | `string` |
 | `outputPath?` | `string` |
 | `program` | `string` |
+| `restartOnError?` | `boolean` |
 
 #### Defined in
 
-[common/types.ts:5](https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/common/types.ts#L5)
+[common/types.ts:5](https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L5)
 
 ___
 
@@ -59,7 +64,7 @@ defines the structure of command options
 
 #### Defined in
 
-[common/types.ts:15](https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/common/types.ts#L15)
+[common/types.ts:16](https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L16)
 
 ## Functions
 
@@ -85,7 +90,7 @@ This function executes the build
 
 #### Defined in
 
-[commands/build.ts:15](https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/commands/build.ts#L15)
+[commands/build.ts:15](https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/commands/build.ts#L15)
 
 ___
 
@@ -109,7 +114,7 @@ checks if a path exists
 
 #### Defined in
 
-[utils/pathExists.ts:8](https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/pathExists.ts#L8)
+[utils/pathExists.ts:8](https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/pathExists.ts#L8)
 
 ___
 
@@ -134,7 +139,7 @@ ___
 
 #### Defined in
 
-[utils/readYAML.ts:13](https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/readYAML.ts#L13)
+[utils/readYAML.ts:13](https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/readYAML.ts#L13)
 
 ___
 
@@ -155,7 +160,7 @@ ___
 
 #### Defined in
 
-[commands/run.ts:23](https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/commands/run.ts#L23)
+[commands/run.ts:31](https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/commands/run.ts#L31)
 
 ___
 
@@ -177,29 +182,25 @@ Provides a interactive prompt to select components
 
 #### Defined in
 
-[utils/selectComponents.ts:8](https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/selectComponents.ts#L8)
+[utils/selectComponents.ts:8](https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/selectComponents.ts#L8)
 
 ___
 
 ### spawnCommand
 
-▸ **spawnCommand**(`command`, `callback`, `args?`, `name?`, `outputPath?`): `Promise`<`void`\>
+▸ **spawnCommand**(`options`): `Promise`<`void`\>
 
 This function spawns a shell executing a program
 
 **`example`**
 
-    spawnCommand('cat myFile', myCallback(), ['--verbose'], 'myCommand', 'logs')
+    spawnCommand({'cat myFile', myCallback(options), ['--verbose'], 'myCommand', 'logs', myErrorHandler(options)})
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `command` | `string` | The command to execute |
-| `callback` | `Function` | Invoked after the command closes |
-| `args?` | `string`[] | - |
-| `name?` | `string` | - |
-| `outputPath?` | `string` | - |
+| Name | Type |
+| :------ | :------ |
+| `options` | [`SpawnCommandOptions`](interfaces/SpawnCommandOptions.md) |
 
 #### Returns
 
@@ -209,7 +210,7 @@ This function spawns a shell executing a program
 
 #### Defined in
 
-[utils/spawnCommand.ts:20](https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/spawnCommand.ts#L20)
+[utils/spawnCommand.ts:25](https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/spawnCommand.ts#L25)
 
 ___
 
@@ -235,4 +236,4 @@ This function checks if all required binaries for build are available
 
 #### Defined in
 
-[utils/validateEnvironment.ts:22](https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/validateEnvironment.ts#L22)
+[utils/validateEnvironment.ts:23](https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/validateEnvironment.ts#L23)

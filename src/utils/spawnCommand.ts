@@ -2,28 +2,30 @@ import * as childProcess from 'child_process';
 import * as path from 'path';
 import {pathExists} from './pathExists';
 import {writeFile, mkdir} from 'fs/promises';
+import {SpawnCommandOptions} from '../common/types';
+
+/**
+ *
+ * @param {SpawnCommandOptions} options
+ */
+async function restartOnError(options:SpawnCommandOptions) {
+  await spawnCommand(options);
+}
 
 /**
  * This function spawns a shell executing a program
  *
- * @param {string} command - The command to execute
- * @param {Function} callback - Invoked after the command closes
- * @param {string[]} [args] - List of arguments to execute the command with
- * @param {string} [name] - Name of the process
- * @param {string} [outputPath] - Path where the log will be saved to
+ * @param {SpawnCommandOptions} options
  * @return {Promise<string>} - The output of the command
  *
  * @example
  *
- *     spawnCommand('cat myFile', myCallback(), ['--verbose'], 'myCommand', 'logs')
+ *     spawnCommand({'cat myFile', myCallback(options), ['--verbose'], 'myCommand', 'logs', myErrorHandler(options)})
  */
 export async function spawnCommand(
-    command: string,
-    callback:Function,
-    args?: string[],
-    name?: string,
-    outputPath?: string,
+    options: SpawnCommandOptions,
 ) {
+  const {command, callback, args, name, outputPath, errorCallback} = options;
   let outputFile: string;
   if (outputPath) {
     if (!await pathExists(outputPath)) {
@@ -55,12 +57,18 @@ export async function spawnCommand(
       await writeFile(outputFile, scriptOutput);
     }
     console.error(`[${name}]: ${data}`.red);
+    if (errorCallback) {
+      errorCallback(data, options);
+    }
+    if (options.restartOnError) {
+      restartOnError(options);
+    }
   });
 
   child.on('close', async function(code) {
     if (outputPath) {
       await writeFile(outputFile, scriptOutput);
     }
-    callback(scriptOutput, code, name);
+    callback(code, scriptOutput, options);
   });
 };

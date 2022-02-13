@@ -3,16 +3,24 @@ import {selectComponents} from '../utils/selectComponents';
 import {spawnCommand} from '../utils/spawnCommand';
 import {validateEnvironment} from '../utils/validateEnvironment';
 
-import {Component, Options} from '../common/types';
+import {Component, Options, SpawnCommandOptions} from '../common/types';
 
 /**
  *
- * @param {string} scriptOutput - output of the script
  * @param {number} code - exit code of the script
- * @param {string} name - name of the executed command
+ * @param {SpawnCommandOptions} options - options of the executed command
  */
-function componentCallback(scriptOutput: string, code:number, name?:string) {
-  console.info(`${name} terminated with ${code}`);
+function componentCallback(code:number, options:SpawnCommandOptions) {
+  console.info(`${options.name} terminated with ${code}`);
+}
+
+/**
+ *
+ * @param {string} exitData - error output of the script
+ * @param {SpawnCommandOptions} options - options of the executed command
+ */
+function errorCallback(exitData: string, options:SpawnCommandOptions) {
+  console.info(`${options.name} terminated with an error`);
 }
 
 /**
@@ -30,17 +38,20 @@ export async function run(configPath: string, options: Options) {
     }
     console.info('build environment is available'.green);
   }
-
   const usedComponents: Component[] = options.interactive ?
     await selectComponents(configData.components) :
     configData.components;
-  await Promise.all(usedComponents.map(async (component: any) => {
-    const {name, outputPath, program} = component;
-    const relCommand = `./bin/${program}`;
-    if (component.args) {
-      await spawnCommand(relCommand, componentCallback, component.args, name, outputPath);
-    } else {
-      await spawnCommand(relCommand, componentCallback, undefined, name, outputPath);
-    }
+  await Promise.all(usedComponents.map(async (component: Component) => {
+    const relCommand = `./bin/${component.program}`;
+    const options: SpawnCommandOptions = {
+      command: relCommand,
+      callback: componentCallback,
+      name: component.name,
+      outputPath: component.outputPath,
+      args: component.args,
+      errorCallback: errorCallback,
+      restartOnError: component.restartOnError,
+    };
+    await spawnCommand(options);
   }));
 }

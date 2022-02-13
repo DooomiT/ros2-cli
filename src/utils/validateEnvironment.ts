@@ -1,3 +1,4 @@
+import {SpawnCommandOptions} from '../common/types';
 import {spawnCommand} from './spawnCommand';
 
 /**
@@ -24,7 +25,11 @@ export async function validateEnvironment(
     pythonVersion?: string,
 ) {
   try {
-    await spawnCommand('ros2', defaultCallback);
+    const options:SpawnCommandOptions = {
+      command: 'ros2',
+      callback: defaultCallback,
+    };
+    await spawnCommand(options);
   } catch (error: unknown) {
     if (error instanceof Error) {
       throw new Error(`${error.message}Try source /opt/ros2/setup.bash`);
@@ -33,7 +38,11 @@ export async function validateEnvironment(
   console.info('ros2 is installed'.green);
 
   try {
-    await spawnCommand('colcon', defaultCallback);
+    const options:SpawnCommandOptions = {
+      command: 'colcon',
+      callback: defaultCallback,
+    };
+    await spawnCommand(options);
   } catch (error: unknown) {
     if (error instanceof Error) {
       throw new Error(`${error.message}`);
@@ -41,15 +50,26 @@ export async function validateEnvironment(
   }
   console.info('colcon is installed'.green);
 
-  if (pythonVersion) {
-    await spawnCommand(`${pythonCommand}`,
-        function(scriptOutput: string, code:number, name?: string) {
-          if (scriptOutput !== pythonVersion) {
-            throw new Error(`python version required: ${pythonVersion} used: ${scriptOutput}`);
-          }
-          console.info('Python is installed'.green);
-        },
-        ['--version']);
+  /**
+   *
+   * @param {number} code
+   * @param {string} output
+   * @param {SpawnCommandOptions} options
+   */
+  function pythonCallback(code: number, output: string, options:SpawnCommandOptions) {
+    if (output !== pythonVersion) {
+      throw new Error(`python version required: ${pythonVersion} used: ${output}`);
+    }
+    console.info('Python is installed'.green);
   }
-  return;
+
+  if (pythonVersion) {
+    const options:SpawnCommandOptions = {
+      command: `${pythonCommand}`,
+      args: ['--version'],
+      callback: pythonCallback,
+    };
+    await spawnCommand(options);
+    return;
+  }
 }

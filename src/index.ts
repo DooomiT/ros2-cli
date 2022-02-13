@@ -64,7 +64,7 @@ program.command('run')
     .description('Run the ros2 nodes')
     .argument('[config]', 'Configuration file describing the components')
     .option('-n, --no-validation', 'ignore validation of build environment')
-    .option('-i, --interactive', 'run with interactive prompts', true)
+    .option('-i, --interactive', 'run with interactive prompts', false)
     .action(withErrors(run));
 
 program

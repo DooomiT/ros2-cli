@@ -7,7 +7,7 @@
     "ros2-cli": "./dist/index.js"
   },
   "scripts": {
-    "debug": "npx ts-node src/index.ts run -n -i templates/config.yml",
+    "debug": "npx ts-node src/index.ts run -n templates/config.yml",
     "prepare": "husky install",
     "build": "tsc --build",
     "clean": "tsc --build --clean",

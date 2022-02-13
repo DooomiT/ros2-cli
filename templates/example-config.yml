@@ -8,8 +8,7 @@ components:
     program: baseSubscriber.sh
     args:
       - -v
+    restartOnError: true
   - name: basePublisher
     outputPath: components/basePublisher
     program: basePublisher.sh
-    args:
-      - -v
