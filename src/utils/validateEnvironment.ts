@@ -2,16 +2,6 @@ import {SpawnCommandOptions} from '../common/types';
 import {spawnCommand} from './spawnCommand';
 
 /**
- * This function provides a default callback
- * @param {string} scriptOutput - output of the script
- * @param {number} code - exit code of the script
- * @param {string} name - name of the executed command
- */
-function defaultCallback(scriptOutput: string, code:number, name?: string) {
-  console.info(`terminated with ${code}`);
-}
-
-/**
  * This function checks if all required binaries for build are available
  *
  * @param {string} [pythonCommand] - the command used to execute python
@@ -24,30 +14,14 @@ export async function validateEnvironment(
     pythonCommand?: string,
     pythonVersion?: string,
 ) {
-  try {
-    const options:SpawnCommandOptions = {
-      command: 'ros2',
-      callback: defaultCallback,
-    };
-    await spawnCommand(options);
-  } catch (error: unknown) {
-    if (error instanceof Error) {
-      throw new Error(`${error.message}Try source /opt/ros2/setup.bash`);
-    }
-  }
+  await spawnCommand({command: 'ros2', errorCallback: (data:number, options: SpawnCommandOptions) => {
+    throw new Error('ros2 failed');
+  }});
   console.info('ros2 is installed'.green);
 
-  try {
-    const options:SpawnCommandOptions = {
-      command: 'colcon',
-      callback: defaultCallback,
-    };
-    await spawnCommand(options);
-  } catch (error: unknown) {
-    if (error instanceof Error) {
-      throw new Error(`${error.message}`);
-    }
-  }
+  await spawnCommand({command: 'colcon', errorCallback: (data:number, options: SpawnCommandOptions) => {
+    throw new Error('colcon failed');
+  }});
   console.info('colcon is installed'.green);
 
   /**
