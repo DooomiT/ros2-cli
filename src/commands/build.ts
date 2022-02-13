@@ -1,4 +1,4 @@
-import {Component} from '../common/types';
+import {Component, Options} from '../common/types';
 import {selectComponents} from '../utils/selectComponents';
 import {validateEnvironment} from '../utils/validateEnvironment';
 import {readYAML} from '../utils/readYAML';
@@ -12,7 +12,7 @@ import {readYAML} from '../utils/readYAML';
  * @example
  *     build('./config')
  */
-export async function build(configPath: string, options: any) {
+export async function build(configPath: string, options: Options) {
   const configData = await readYAML(configPath);
   if (options.validation) {
     if (configData.common.pythonCommand && configData.common.pythonVersion) {
