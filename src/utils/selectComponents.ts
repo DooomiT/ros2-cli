@@ -1,10 +1,11 @@
 // @ts-ignore
 import {MultiSelect} from 'enquirer';
+import {Component} from '../common/types';
 /**
  * Provides a interactive prompt to select components
  * @param {any} components - list of components
  */
-export async function selectComponents(components: any): Promise<any> {
+export async function selectComponents(components: Component[]): Promise<Component[]> {
   let selectedComponents: any = undefined;
   const prompt = new MultiSelect({
     name: 'value',
@@ -12,13 +13,13 @@ export async function selectComponents(components: any): Promise<any> {
     choices: components.map((component: any) => {
       return {name: component.name, value: component};
     }),
-    result(names:any) {
+    result(names:string[]) {
       const componentsMap = this.map(names);
       const componentsList = Object.values(componentsMap);
       return componentsList;
     },
   });
   await prompt.run()
-      .then((answer:any) => selectedComponents = answer);
+      .then((answer:Component[]) => selectedComponents = answer);
   return selectedComponents;
 }

@@ -3,6 +3,8 @@ import {selectComponents} from '../utils/selectComponents';
 import {spawnCommand} from '../utils/spawnCommand';
 import {validateEnvironment} from '../utils/validateEnvironment';
 
+import {Component} from '../common/types';
+
 /**
  *
  * @param {string} scriptOutput - output of the script
@@ -29,7 +31,9 @@ export async function run(configPath: string, options: any) {
     console.info('build environment is available'.green);
   }
 
-  const usedComponents = options.interactive ? await selectComponents(configData.components) : configData.components;
+  const usedComponents: Component[] = options.interactive ?
+    await selectComponents(configData.components) :
+    configData.components;
   await Promise.all(usedComponents.map(async (component: any) => {
     const {name, outputPath, program} = component;
     const relCommand = `./bin/${program}`;

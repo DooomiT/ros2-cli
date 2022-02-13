@@ -6,6 +6,10 @@ slug: "modules"
 
 ## Table of contents
 
+### Type aliases
+
+- [Component](modules.md#component)
+
 ### Functions
 
 - [build](modules.md#build)
@@ -15,6 +19,27 @@ slug: "modules"
 - [selectComponents](modules.md#selectcomponents)
 - [spawnCommand](modules.md#spawncommand)
 - [validateEnvironment](modules.md#validateenvironment)
+
+## Type aliases
+
+### Component
+
+Ƭ **Component**: `Object`
+
+defines the structure of components
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `args?` | `string`[] |
+| `name` | `string` |
+| `outputPath?` | `string` |
+| `program` | `string` |
+
+#### Defined in
+
+[common/types.ts:5](https://github.com/DooomiT/ros2-cli/blob/a614b27/src/common/types.ts#L5)
 
 ## Functions
 
@@ -40,7 +65,7 @@ This function executes the build
 
 #### Defined in
 
-[commands/build.ts:14](https://github.com/DooomiT/ros2-cli/blob/f3603df/src/commands/build.ts#L14)
+[commands/build.ts:15](https://github.com/DooomiT/ros2-cli/blob/a614b27/src/commands/build.ts#L15)
 
 ___
 
@@ -64,7 +89,7 @@ checks if a path exists
 
 #### Defined in
 
-[utils/pathExists.ts:8](https://github.com/DooomiT/ros2-cli/blob/f3603df/src/utils/pathExists.ts#L8)
+[utils/pathExists.ts:8](https://github.com/DooomiT/ros2-cli/blob/a614b27/src/utils/pathExists.ts#L8)
 
 ___
 
@@ -89,7 +114,7 @@ ___
 
 #### Defined in
 
-[utils/readYAML.ts:13](https://github.com/DooomiT/ros2-cli/blob/f3603df/src/utils/readYAML.ts#L13)
+[utils/readYAML.ts:13](https://github.com/DooomiT/ros2-cli/blob/a614b27/src/utils/readYAML.ts#L13)
 
 ___
 
@@ -110,13 +135,13 @@ ___
 
 #### Defined in
 
-[commands/run.ts:21](https://github.com/DooomiT/ros2-cli/blob/f3603df/src/commands/run.ts#L21)
+[commands/run.ts:23](https://github.com/DooomiT/ros2-cli/blob/a614b27/src/commands/run.ts#L23)
 
 ___
 
 ### selectComponents
 
-▸ **selectComponents**(`components`): `Promise`<`any`\>
+▸ **selectComponents**(`components`): `Promise`<[`Component`](modules.md#component)[]\>
 
 Provides a interactive prompt to select components
 
@@ -124,15 +149,15 @@ Provides a interactive prompt to select components
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `components` | `any` | list of components |
+| `components` | [`Component`](modules.md#component)[] | list of components |
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`<[`Component`](modules.md#component)[]\>
 
 #### Defined in
 
-[utils/selectComponents.ts:7](https://github.com/DooomiT/ros2-cli/blob/f3603df/src/utils/selectComponents.ts#L7)
+[utils/selectComponents.ts:8](https://github.com/DooomiT/ros2-cli/blob/a614b27/src/utils/selectComponents.ts#L8)
 
 ___
 
@@ -164,7 +189,7 @@ This function spawns a shell executing a program
 
 #### Defined in
 
-[utils/spawnCommand.ts:20](https://github.com/DooomiT/ros2-cli/blob/f3603df/src/utils/spawnCommand.ts#L20)
+[utils/spawnCommand.ts:20](https://github.com/DooomiT/ros2-cli/blob/a614b27/src/utils/spawnCommand.ts#L20)
 
 ___
 
@@ -190,4 +215,4 @@ This function checks if all required binaries for build are available
 
 #### Defined in
 
-[utils/validateEnvironment.ts:22](https://github.com/DooomiT/ros2-cli/blob/f3603df/src/utils/validateEnvironment.ts#L22)
+[utils/validateEnvironment.ts:22](https://github.com/DooomiT/ros2-cli/blob/a614b27/src/utils/validateEnvironment.ts#L22)

@@ -1,3 +1,4 @@
+import {Component} from '../common/types';
 import {selectComponents} from '../utils/selectComponents';
 import {validateEnvironment} from '../utils/validateEnvironment';
 import {readYAML} from '../utils/readYAML';
@@ -21,8 +22,9 @@ export async function build(configPath: string, options: any) {
     }
     console.info('build environment is available'.green);
   }
-  const usedComponents = options.interactive ? await selectComponents(configData.components) : configData.components;
-
+  const usedComponents: Component[] = options.interactive ?
+    await selectComponents(configData.components) :
+    configData.components;
   for (const component of usedComponents) {
     console.info(component);
   }
