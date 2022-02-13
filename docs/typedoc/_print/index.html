@@ -70,7 +70,11 @@ This is the multi-page printable view of this section.
 </div>
 <h1 class=title>Readme</h1>
 <ul>
-<li>1: <a href=#pg-73a5a3d1b02aa7d44aefc8444ab2f7cd>ros2-cli - v1.0.0</a></li>
+<li>1: <a href=#pg-0590f3c0564eb55635a484370ae12a20>Interfaces</a></li>
+<ul>
+<li>1.1: <a href=#pg-ef0c5daea71e68a180eebb70737cd267>Interface: SpawnCommandOptions</a></li>
+</ul>
+<li>2: <a href=#pg-73a5a3d1b02aa7d44aefc8444ab2f7cd>ros2-cli - v1.0.0</a></li>
 </ul>
 <div class=content>
 <h1 id=ros2-cli>ros2-cli</h1>
@@ -113,8 +117,74 @@ This is the multi-page printable view of this section.
 </div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-73a5a3d1b02aa7d44aefc8444ab2f7cd>1 - ros2-cli - v1.0.0</h1>
+<h1 id=pg-0590f3c0564eb55635a484370ae12a20>1 - Interfaces</h1>
+</div>
+<div class=td-content>
+<h1 id=pg-ef0c5daea71e68a180eebb70737cd267>1.1 - Interface: SpawnCommandOptions</h1>
+<p>defines the input for spawnCommand</p>
+<p><strong><code>param</code></strong> The command to execute</p>
+<p><strong><code>param</code></strong> Invoked after the command closes</p>
+<p><strong><code>param</code></strong> List of arguments to execute the command with</p>
+<p><strong><code>param</code></strong> Name of the process</p>
+<p><strong><code>param</code></strong> Path where the log will be saved to</p>
+<p><strong><code>param</code></strong></p>
+<ul>
+<li>Invoked after the command execution stops on error</li>
+</ul>
 <h2 id=table-of-contents>Table of contents</h2>
+<h3 id=properties>Properties</h3>
+<ul>
+<li><a href=SpawnCommandOptions.md#args>args</a></li>
+<li><a href=SpawnCommandOptions.md#callback>callback</a></li>
+<li><a href=SpawnCommandOptions.md#command>command</a></li>
+<li><a href=SpawnCommandOptions.md#errorcallback>errorCallback</a></li>
+<li><a href=SpawnCommandOptions.md#name>name</a></li>
+<li><a href=SpawnCommandOptions.md#outputpath>outputPath</a></li>
+<li><a href=SpawnCommandOptions.md#restartonerror>restartOnError</a></li>
+</ul>
+<h2 id=properties-1>Properties</h2>
+<h3 id=args>args</h3>
+<p>• <code>Optional</code> <strong>args</strong>: <code>string</code>[]</p>
+<h4 id=defined-in>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L35>common/types.ts:35</a></p>
+<hr>
+<h3 id=callback>callback</h3>
+<p>• <strong>callback</strong>: <code>Function</code></p>
+<h4 id=defined-in-1>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L34>common/types.ts:34</a></p>
+<hr>
+<h3 id=command>command</h3>
+<p>• <strong>command</strong>: <code>string</code></p>
+<h4 id=defined-in-2>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L33>common/types.ts:33</a></p>
+<hr>
+<h3 id=errorcallback>errorCallback</h3>
+<p>• <code>Optional</code> <strong>errorCallback</strong>: <code>Function</code></p>
+<h4 id=defined-in-3>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L38>common/types.ts:38</a></p>
+<hr>
+<h3 id=name>name</h3>
+<p>• <code>Optional</code> <strong>name</strong>: <code>string</code></p>
+<h4 id=defined-in-4>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L36>common/types.ts:36</a></p>
+<hr>
+<h3 id=outputpath>outputPath</h3>
+<p>• <code>Optional</code> <strong>outputPath</strong>: <code>string</code></p>
+<h4 id=defined-in-5>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L37>common/types.ts:37</a></p>
+<hr>
+<h3 id=restartonerror>restartOnError</h3>
+<p>• <code>Optional</code> <strong>restartOnError</strong>: <code>boolean</code></p>
+<h4 id=defined-in-6>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L39>common/types.ts:39</a></p>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-73a5a3d1b02aa7d44aefc8444ab2f7cd>2 - ros2-cli - v1.0.0</h1>
+<h2 id=table-of-contents>Table of contents</h2>
+<h3 id=interfaces>Interfaces</h3>
+<ul>
+<li><a href=interfaces/SpawnCommandOptions.md>SpawnCommandOptions</a></li>
+</ul>
 <h3 id=type-aliases>Type aliases</h3>
 <ul>
 <li><a href=modules.md#component>Component</a></li>
@@ -159,10 +229,14 @@ This is the multi-page printable view of this section.
 <td style=text-align:left><code>program</code></td>
 <td style=text-align:left><code>string</code></td>
 </tr>
+<tr>
+<td style=text-align:left><code>restartOnError?</code></td>
+<td style=text-align:left><code>boolean</code></td>
+</tr>
 </tbody>
 </table>
 <h4 id=defined-in>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/common/types.ts#L5>common/types.ts:5</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L5>common/types.ts:5</a></p>
 <hr>
 <h3 id=options>Options</h3>
 <p>Ƭ <strong>Options</strong>: <code>Object</code></p>
@@ -187,7 +261,7 @@ This is the multi-page printable view of this section.
 </tbody>
 </table>
 <h4 id=defined-in-1>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/common/types.ts#L15>common/types.ts:15</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L16>common/types.ts:16</a></p>
 <h2 id=functions-1>Functions</h2>
 <h3 id=build>build</h3>
 <p>▸ <strong>build</strong>(<code>configPath</code>, <code>options</code>): <code>Promise</code>&lt;<code>void</code>></p>
@@ -219,7 +293,7 @@ build('./config')</p>
 <h4 id=returns>Returns</h4>
 <p><code>Promise</code>&lt;<code>void</code>></p>
 <h4 id=defined-in-2>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/commands/build.ts#L15>commands/build.ts:15</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/commands/build.ts#L15>commands/build.ts:15</a></p>
 <hr>
 <h3 id=pathexists>pathExists</h3>
 <p>▸ <strong>pathExists</strong>(<code>path</code>): <code>Promise</code>&lt;<code>boolean</code>></p>
@@ -247,7 +321,7 @@ build('./config')</p>
 <li>The output of the command</li>
 </ul>
 <h4 id=defined-in-3>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/pathExists.ts#L8>utils/pathExists.ts:8</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/pathExists.ts#L8>utils/pathExists.ts:8</a></p>
 <hr>
 <h3 id=readyaml>readYAML</h3>
 <p>▸ <strong>readYAML</strong>(<code>path</code>): <code>Promise</code>&lt;<code>any</code>></p>
@@ -276,7 +350,7 @@ readYaml('./myFile')</p>
 <li>parsed file content</li>
 </ul>
 <h4 id=defined-in-4>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/readYAML.ts#L13>utils/readYAML.ts:13</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/readYAML.ts#L13>utils/readYAML.ts:13</a></p>
 <hr>
 <h3 id=run>run</h3>
 <p>▸ <strong>run</strong>(<code>configPath</code>, <code>options</code>): <code>Promise</code>&lt;<code>void</code>></p>
@@ -305,7 +379,7 @@ readYaml('./myFile')</p>
 <h4 id=returns-3>Returns</h4>
 <p><code>Promise</code>&lt;<code>void</code>></p>
 <h4 id=defined-in-5>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/commands/run.ts#L23>commands/run.ts:23</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/commands/run.ts#L31>commands/run.ts:31</a></p>
 <hr>
 <h3 id=selectcomponents>selectComponents</h3>
 <p>▸ <strong>selectComponents</strong>(<code>components</code>): <code>Promise</code>&lt;<a href=modules.md#component><code>Component</code></a>[]></p>
@@ -330,13 +404,13 @@ readYaml('./myFile')</p>
 <h4 id=returns-4>Returns</h4>
 <p><code>Promise</code>&lt;<a href=modules.md#component><code>Component</code></a>[]></p>
 <h4 id=defined-in-6>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/selectComponents.ts#L8>utils/selectComponents.ts:8</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/selectComponents.ts#L8>utils/selectComponents.ts:8</a></p>
 <hr>
 <h3 id=spawncommand>spawnCommand</h3>
-<p>▸ <strong>spawnCommand</strong>(<code>command</code>, <code>callback</code>, <code>args?</code>, <code>name?</code>, <code>outputPath?</code>): <code>Promise</code>&lt;<code>void</code>></p>
+<p>▸ <strong>spawnCommand</strong>(<code>options</code>): <code>Promise</code>&lt;<code>void</code>></p>
 <p>This function spawns a shell executing a program</p>
 <p><strong><code>example</code></strong></p>
-<pre><code>spawnCommand('cat myFile', myCallback(), ['--verbose'], 'myCommand', 'logs')
+<pre><code>spawnCommand({'cat myFile', myCallback(options), ['--verbose'], 'myCommand', 'logs', myErrorHandler(options)})
 </code></pre>
 <h4 id=parameters-5>Parameters</h4>
 <table>
@@ -344,34 +418,12 @@ readYaml('./myFile')</p>
 <tr>
 <th style=text-align:left>Name</th>
 <th style=text-align:left>Type</th>
-<th style=text-align:left>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style=text-align:left><code>command</code></td>
-<td style=text-align:left><code>string</code></td>
-<td style=text-align:left>The command to execute</td>
-</tr>
-<tr>
-<td style=text-align:left><code>callback</code></td>
-<td style=text-align:left><code>Function</code></td>
-<td style=text-align:left>Invoked after the command closes</td>
-</tr>
-<tr>
-<td style=text-align:left><code>args?</code></td>
-<td style=text-align:left><code>string</code>[]</td>
-<td style=text-align:left>-</td>
-</tr>
-<tr>
-<td style=text-align:left><code>name?</code></td>
-<td style=text-align:left><code>string</code></td>
-<td style=text-align:left>-</td>
-</tr>
-<tr>
-<td style=text-align:left><code>outputPath?</code></td>
-<td style=text-align:left><code>string</code></td>
-<td style=text-align:left>-</td>
+<td style=text-align:left><code>options</code></td>
+<td style=text-align:left><a href=interfaces/SpawnCommandOptions.md><code>SpawnCommandOptions</code></a></td>
 </tr>
 </tbody>
 </table>
@@ -381,7 +433,7 @@ readYaml('./myFile')</p>
 <li>The output of the command</li>
 </ul>
 <h4 id=defined-in-7>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/spawnCommand.ts#L20>utils/spawnCommand.ts:20</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/spawnCommand.ts#L25>utils/spawnCommand.ts:25</a></p>
 <hr>
 <h3 id=validateenvironment>validateEnvironment</h3>
 <p>▸ <strong>validateEnvironment</strong>(<code>pythonCommand?</code>, <code>pythonVersion?</code>): <code>Promise</code>&lt;<code>void</code>></p>
@@ -410,7 +462,7 @@ validateEnvironment(')</p>
 <h4 id=returns-6>Returns</h4>
 <p><code>Promise</code>&lt;<code>void</code>></p>
 <h4 id=defined-in-8>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/validateEnvironment.ts#L22>utils/validateEnvironment.ts:22</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/validateEnvironment.ts#L23>utils/validateEnvironment.ts:23</a></p>
 </div>
 </main>
 </div>
