@@ -25,27 +25,28 @@ async function restartOnError(options:SpawnCommandOptions) {
 export async function spawnCommand(
     options: SpawnCommandOptions,
 ) {
-  const {command, callback, args, name, outputPath, errorCallback} = options;
   let outputFile: string;
-  if (outputPath) {
-    if (!await pathExists(outputPath)) {
-      await mkdir(outputPath, {recursive: true});
+  if (options.outputPath) {
+    if (!await pathExists(options.outputPath)) {
+      await mkdir(options.outputPath, {recursive: true});
     }
-    const outputFileName = name || command.replace(/[ &\/\\#,+()$~%.'":*?<>{}]/g, '');
-    outputFile = path.join(outputPath, outputFileName);
+    const outputFileName = options.name || options.command.replace(/[ &\/\\#,+()$~%.'":*?<>{}]/g, '');
+    outputFile = path.join(options.outputPath, outputFileName);
   }
 
-  console.log(`start ${command}`.green);
-  if (!pathExists(command)) {
-    throw new Error(`path ${command} does not exist`);
+  console.log(`start ${options.command}`.green);
+  if (!pathExists(options.command)) {
+    throw new Error(`path ${options.command} does not exist`);
   }
-  const child = args ? childProcess.spawn(command) : childProcess.spawn(command, args);
+  const child = options.args ?
+  childProcess.spawn(options.command) :
+  childProcess.spawn(options.command, options.args);
 
   let scriptOutput = '';
 
   child.stdout.setEncoding('utf8');
   child.stdout.on('data', function(data) {
-    console.log(`[${name}]: ${data}`);
+    console.log(`[${options.name}]: ${data}`);
     data=data.toString();
     scriptOutput+=data;
   });
@@ -53,12 +54,12 @@ export async function spawnCommand(
   child.stderr.setEncoding('utf8');
   child.stderr.on('data', async function(data) {
     scriptOutput+=data;
-    if (outputPath) {
+    if (options.outputPath) {
       await writeFile(outputFile, scriptOutput);
     }
-    console.error(`[${name}]: ${data}`.red);
-    if (errorCallback) {
-      errorCallback(data, options);
+    console.error(`[${options.name}]: ${data}`.red);
+    if (options.errorCallback) {
+      options.errorCallback(data, options);
     }
     if (options.restartOnError) {
       restartOnError(options);
@@ -66,9 +67,11 @@ export async function spawnCommand(
   });
 
   child.on('close', async function(code) {
-    if (outputPath) {
+    if (options.outputPath) {
       await writeFile(outputFile, scriptOutput);
     }
-    callback(code, scriptOutput, options);
+    if (options.callback) {
+      options.callback(code, scriptOutput, options);
+    }
   });
 };

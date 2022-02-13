@@ -27,11 +27,11 @@ export type Options = {
  * @param {string} [name] - Name of the process
  * @param {string} [outputPath] - Path where the log will be saved to
  * @param {Function(string, string, SpawnCommandOptions)} errorCallback
- * - Invoked after the command execution stops on error
+ * Invoked after the command execution stops on error
  */
 export interface SpawnCommandOptions {
     command: string,
-    callback:Function,
+    callback?:Function,
     args?: string[],
     name?: string,
     outputPath?: string,
