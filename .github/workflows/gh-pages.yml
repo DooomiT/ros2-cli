@@ -45,6 +45,7 @@ jobs:
           npm ci
           npm install -g postcss-cli
           npm install -g autoprefixer
+          cd docs
           hugo --minify
 
       - name: Deploy
