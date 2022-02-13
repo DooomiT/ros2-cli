@@ -55,7 +55,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;h4 id="defined-in">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L5">common/types.ts:5&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/common/types.ts#L5">common/types.ts:5&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="options">Options&lt;/h3>
 &lt;p>Ƭ &lt;strong>Options&lt;/strong>: &lt;code>Object&lt;/code>&lt;/p>
@@ -80,7 +80,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;h4 id="defined-in-1">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L16">common/types.ts:16&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/common/types.ts#L16">common/types.ts:16&lt;/a>&lt;/p>
 &lt;h2 id="functions-1">Functions&lt;/h2>
 &lt;h3 id="build">build&lt;/h3>
 &lt;p>▸ &lt;strong>build&lt;/strong>(&lt;code>configPath&lt;/code>, &lt;code>options&lt;/code>): &lt;code>Promise&lt;/code>&amp;lt;&lt;code>void&lt;/code>&amp;gt;&lt;/p>
@@ -112,7 +112,7 @@ build('./config')&lt;/p>
 &lt;h4 id="returns">Returns&lt;/h4>
 &lt;p>&lt;code>Promise&lt;/code>&amp;lt;&lt;code>void&lt;/code>&amp;gt;&lt;/p>
 &lt;h4 id="defined-in-2">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/commands/build.ts#L15">commands/build.ts:15&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/commands/build.ts#L15">commands/build.ts:15&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="pathexists">pathExists&lt;/h3>
 &lt;p>▸ &lt;strong>pathExists&lt;/strong>(&lt;code>path&lt;/code>): &lt;code>Promise&lt;/code>&amp;lt;&lt;code>boolean&lt;/code>&amp;gt;&lt;/p>
@@ -140,7 +140,7 @@ build('./config')&lt;/p>
 &lt;li>The output of the command&lt;/li>
 &lt;/ul>
 &lt;h4 id="defined-in-3">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/pathExists.ts#L8">utils/pathExists.ts:8&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/utils/pathExists.ts#L8">utils/pathExists.ts:8&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="readyaml">readYAML&lt;/h3>
 &lt;p>▸ &lt;strong>readYAML&lt;/strong>(&lt;code>path&lt;/code>): &lt;code>Promise&lt;/code>&amp;lt;&lt;code>any&lt;/code>&amp;gt;&lt;/p>
@@ -169,7 +169,7 @@ readYaml('./myFile')&lt;/p>
 &lt;li>parsed file content&lt;/li>
 &lt;/ul>
 &lt;h4 id="defined-in-4">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/readYAML.ts#L13">utils/readYAML.ts:13&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/utils/readYAML.ts#L13">utils/readYAML.ts:13&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="run">run&lt;/h3>
 &lt;p>▸ &lt;strong>run&lt;/strong>(&lt;code>configPath&lt;/code>, &lt;code>options&lt;/code>): &lt;code>Promise&lt;/code>&amp;lt;&lt;code>void&lt;/code>&amp;gt;&lt;/p>
@@ -198,7 +198,7 @@ readYaml('./myFile')&lt;/p>
 &lt;h4 id="returns-3">Returns&lt;/h4>
 &lt;p>&lt;code>Promise&lt;/code>&amp;lt;&lt;code>void&lt;/code>&amp;gt;&lt;/p>
 &lt;h4 id="defined-in-5">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/commands/run.ts#L31">commands/run.ts:31&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/commands/run.ts#L31">commands/run.ts:31&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="selectcomponents">selectComponents&lt;/h3>
 &lt;p>▸ &lt;strong>selectComponents&lt;/strong>(&lt;code>components&lt;/code>): &lt;code>Promise&lt;/code>&amp;lt;&lt;a href="modules.md#component">&lt;code>Component&lt;/code>&lt;/a>[]&amp;gt;&lt;/p>
@@ -223,7 +223,7 @@ readYaml('./myFile')&lt;/p>
 &lt;h4 id="returns-4">Returns&lt;/h4>
 &lt;p>&lt;code>Promise&lt;/code>&amp;lt;&lt;a href="modules.md#component">&lt;code>Component&lt;/code>&lt;/a>[]&amp;gt;&lt;/p>
 &lt;h4 id="defined-in-6">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/selectComponents.ts#L8">utils/selectComponents.ts:8&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/utils/selectComponents.ts#L8">utils/selectComponents.ts:8&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="spawncommand">spawnCommand&lt;/h3>
 &lt;p>▸ &lt;strong>spawnCommand&lt;/strong>(&lt;code>options&lt;/code>): &lt;code>Promise&lt;/code>&amp;lt;&lt;code>void&lt;/code>&amp;gt;&lt;/p>
@@ -252,7 +252,7 @@ readYaml('./myFile')&lt;/p>
 &lt;li>The output of the command&lt;/li>
 &lt;/ul>
 &lt;h4 id="defined-in-7">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/spawnCommand.ts#L25">utils/spawnCommand.ts:25&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/utils/spawnCommand.ts#L25">utils/spawnCommand.ts:25&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="validateenvironment">validateEnvironment&lt;/h3>
 &lt;p>▸ &lt;strong>validateEnvironment&lt;/strong>(&lt;code>pythonCommand?&lt;/code>, &lt;code>pythonVersion?&lt;/code>): &lt;code>Promise&lt;/code>&amp;lt;&lt;code>void&lt;/code>&amp;gt;&lt;/p>
@@ -281,17 +281,15 @@ validateEnvironment(')&lt;/p>
 &lt;h4 id="returns-6">Returns&lt;/h4>
 &lt;p>&lt;code>Promise&lt;/code>&amp;lt;&lt;code>void&lt;/code>&amp;gt;&lt;/p>
 &lt;h4 id="defined-in-8">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/utils/validateEnvironment.ts#L23">utils/validateEnvironment.ts:23&lt;/a>&lt;/p></description></item><item><title>Docs: Interface: SpawnCommandOptions</title><link>https://dooomit.github.io/ros2-cli/docs/typedoc/interfaces/spawncommandoptions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dooomit.github.io/ros2-cli/docs/typedoc/interfaces/spawncommandoptions/</guid><description>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/utils/validateEnvironment.ts#L23">utils/validateEnvironment.ts:23&lt;/a>&lt;/p></description></item><item><title>Docs: Interface: SpawnCommandOptions</title><link>https://dooomit.github.io/ros2-cli/docs/typedoc/interfaces/spawncommandoptions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dooomit.github.io/ros2-cli/docs/typedoc/interfaces/spawncommandoptions/</guid><description>
 &lt;p>defines the input for spawnCommand&lt;/p>
 &lt;p>&lt;strong>&lt;code>param&lt;/code>&lt;/strong> The command to execute&lt;/p>
 &lt;p>&lt;strong>&lt;code>param&lt;/code>&lt;/strong> Invoked after the command closes&lt;/p>
 &lt;p>&lt;strong>&lt;code>param&lt;/code>&lt;/strong> List of arguments to execute the command with&lt;/p>
 &lt;p>&lt;strong>&lt;code>param&lt;/code>&lt;/strong> Name of the process&lt;/p>
 &lt;p>&lt;strong>&lt;code>param&lt;/code>&lt;/strong> Path where the log will be saved to&lt;/p>
-&lt;p>&lt;strong>&lt;code>param&lt;/code>&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Invoked after the command execution stops on error&lt;/li>
-&lt;/ul>
+&lt;p>&lt;strong>&lt;code>param&lt;/code>&lt;/strong>
+Invoked after the command execution stops on error&lt;/p>
 &lt;h2 id="table-of-contents">Table of contents&lt;/h2>
 &lt;h3 id="properties">Properties&lt;/h3>
 &lt;ul>
@@ -307,34 +305,34 @@ validateEnvironment(')&lt;/p>
 &lt;h3 id="args">args&lt;/h3>
 &lt;p>• &lt;code>Optional&lt;/code> &lt;strong>args&lt;/strong>: &lt;code>string&lt;/code>[]&lt;/p>
 &lt;h4 id="defined-in">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L35">common/types.ts:35&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/common/types.ts#L35">common/types.ts:35&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="callback">callback&lt;/h3>
-&lt;p>• &lt;strong>callback&lt;/strong>: &lt;code>Function&lt;/code>&lt;/p>
+&lt;p>• &lt;code>Optional&lt;/code> &lt;strong>callback&lt;/strong>: &lt;code>Function&lt;/code>&lt;/p>
 &lt;h4 id="defined-in-1">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L34">common/types.ts:34&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/common/types.ts#L34">common/types.ts:34&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="command">command&lt;/h3>
 &lt;p>• &lt;strong>command&lt;/strong>: &lt;code>string&lt;/code>&lt;/p>
 &lt;h4 id="defined-in-2">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L33">common/types.ts:33&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/common/types.ts#L33">common/types.ts:33&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="errorcallback">errorCallback&lt;/h3>
 &lt;p>• &lt;code>Optional&lt;/code> &lt;strong>errorCallback&lt;/strong>: &lt;code>Function&lt;/code>&lt;/p>
 &lt;h4 id="defined-in-3">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L38">common/types.ts:38&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/common/types.ts#L38">common/types.ts:38&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="name">name&lt;/h3>
 &lt;p>• &lt;code>Optional&lt;/code> &lt;strong>name&lt;/strong>: &lt;code>string&lt;/code>&lt;/p>
 &lt;h4 id="defined-in-4">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L36">common/types.ts:36&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/common/types.ts#L36">common/types.ts:36&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="outputpath">outputPath&lt;/h3>
 &lt;p>• &lt;code>Optional&lt;/code> &lt;strong>outputPath&lt;/strong>: &lt;code>string&lt;/code>&lt;/p>
 &lt;h4 id="defined-in-5">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L37">common/types.ts:37&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/common/types.ts#L37">common/types.ts:37&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="restartonerror">restartOnError&lt;/h3>
 &lt;p>• &lt;code>Optional&lt;/code> &lt;strong>restartOnError&lt;/strong>: &lt;code>boolean&lt;/code>&lt;/p>
 &lt;h4 id="defined-in-6">Defined in&lt;/h4>
-&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/e14a1a4/src/common/types.ts#L39">common/types.ts:39&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/b6d05f0/src/common/types.ts#L39">common/types.ts:39&lt;/a>&lt;/p></description></item></channel></rss>
