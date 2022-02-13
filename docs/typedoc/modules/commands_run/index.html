@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.92.2">
+<meta name=generator content="Hugo 0.92.0">
 <meta name=robots content="index, follow">
 <link rel="shortcut icon" href=/ros2-cli/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/ros2-cli/favicons/apple-touch-icon-180x180.png sizes=180x180>
@@ -14,45 +14,45 @@
 <link rel=icon type=image/png href=/ros2-cli/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/ros2-cli/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/ros2-cli/favicons/android-192x192.png sizes=192x192>
-<title>ros2-cli - v1.0.0 | ROS2 CLI</title>
+<title>Module: commands/run | ROS2 CLI</title>
 <meta name=description content="Table of contents
-Interfaces
-
-SpawnCommandOptions
-
-Type aliases
-
-Component
-Options
-
 Functions
 
-build
-pathExists
-readYAML
 run
-selectComponents …">
-<meta property="og:title" content="ros2-cli - v1.0.0">
-<meta property="og:description" content="Table of contents Interfaces  SpawnCommandOptions  Type aliases  Component Options  Functions  build pathExists readYAML run selectComponents spawnCommand validateEnvironment  Type aliases Component Ƭ Component: Object
-defines the structure of components
-Type declaration    Name Type     args? string[]   name string   outputPath? string   program string   restartOnError? boolean    Defined in common/types.ts:5
- Options Ƭ Options: Object">
+
+Functions
+run
+▸ run(configPath, options): Promise<void>
+Parameters
+
+
+
+Name
+Type
+Description
+
+
+
+
+configPath …">
+<meta property="og:title" content="Module: commands/run">
+<meta property="og:description" content="Table of contents Functions  run  Functions run ▸ run(configPath, options): Promise<void>
+Parameters    Name Type Description     configPath string the path of the config used   options any command options    Returns Promise<void>
+Defined in run.ts:21">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://dooomit.github.io/ros2-cli/docs/typedoc/modules/"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2022-02-13T20:33:12+01:00"><meta property="og:site_name" content="ROS2 CLI">
-<meta itemprop=name content="ros2-cli - v1.0.0">
-<meta itemprop=description content="Table of contents Interfaces  SpawnCommandOptions  Type aliases  Component Options  Functions  build pathExists readYAML run selectComponents spawnCommand validateEnvironment  Type aliases Component Ƭ Component: Object
-defines the structure of components
-Type declaration    Name Type     args? string[]   name string   outputPath? string   program string   restartOnError? boolean    Defined in common/types.ts:5
- Options Ƭ Options: Object">
-<meta itemprop=dateModified content="2022-02-13T20:33:12+01:00">
-<meta itemprop=wordCount content="269">
+<meta property="og:url" content="https://dooomit.github.io/ros2-cli/docs/typedoc/modules/commands_run/"><meta property="article:section" content="docs">
+<meta property="article:modified_time" content="2022-02-13T10:28:22+01:00"><meta property="og:site_name" content="ROS2 CLI">
+<meta itemprop=name content="Module: commands/run">
+<meta itemprop=description content="Table of contents Functions  run  Functions run ▸ run(configPath, options): Promise<void>
+Parameters    Name Type Description     configPath string the path of the config used   options any command options    Returns Promise<void>
+Defined in run.ts:21">
+<meta itemprop=dateModified content="2022-02-13T10:28:22+01:00">
+<meta itemprop=wordCount content="32">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
-<meta name=twitter:title content="ros2-cli - v1.0.0">
-<meta name=twitter:description content="Table of contents Interfaces  SpawnCommandOptions  Type aliases  Component Options  Functions  build pathExists readYAML run selectComponents spawnCommand validateEnvironment  Type aliases Component Ƭ Component: Object
-defines the structure of components
-Type declaration    Name Type     args? string[]   name string   outputPath? string   program string   restartOnError? boolean    Defined in common/types.ts:5
- Options Ƭ Options: Object">
+<meta name=twitter:title content="Module: commands/run">
+<meta name=twitter:description content="Table of contents Functions  run  Functions run ▸ run(configPath, options): Promise<void>
+Parameters    Name Type Description     configPath string the path of the config used   options any command options    Returns Promise<void>
+Defined in run.ts:21">
 <link rel=preload href=/ros2-cli/scss/main.min.209ee91954d0f2f182770e6c71011a5580360636bcf2a9bcf7f1c3da478784ff.css as=style>
 <link href=/ros2-cli/scss/main.min.209ee91954d0f2f182770e6c71011a5580360636bcf2a9bcf7f1c3da478784ff.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.6.0.min.js integrity=sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK crossorigin=anonymous></script>
@@ -94,15 +94,17 @@ Type declaration    Name Type     args? string[]   name string   outputPath? str
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-ros2-clidocstypedoc-li>
 <a href=/ros2-cli/docs/typedoc/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-ros2-clidocstypedoc><span>Readme</span></a>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-ros2-clidocstypedocinterfaces-li>
-<a href=/ros2-cli/docs/typedoc/interfaces/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-ros2-clidocstypedocinterfaces><span>Interfaces</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-ros2-clidocstypedocmodules-li>
+<a href=/ros2-cli/docs/typedoc/modules/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-ros2-clidocstypedocmodules><span>Modules</span></a>
 <ul class="ul-3 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-ros2-clidocstypedocinterfacesspawncommandoptions-li>
-<a href=/ros2-cli/docs/typedoc/interfaces/spawncommandoptions/ title="Interface: SpawnCommandOptions" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-ros2-clidocstypedocinterfacesspawncommandoptions><span>SpawnCommandOptions</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-ros2-clidocstypedocmodulescommands_build-li>
+<a href=/ros2-cli/docs/typedoc/modules/commands_build/ title="Module: commands/build" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-ros2-clidocstypedocmodulescommands_build><span>commands/build</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-ros2-clidocstypedocmodulescommands_run-li>
+<a href=/ros2-cli/docs/typedoc/modules/commands_run/ title="Module: commands/run" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-ros2-clidocstypedocmodulescommands_run><span class=td-sidebar-nav-active-item>commands/run</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-ros2-clidocstypedocmodules-li>
-<a href=/ros2-cli/docs/typedoc/modules/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-ros2-clidocstypedocmodules><span class=td-sidebar-nav-active-item>ros2-cli - v1.0.0</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-ros2-clidocstypedocmodules-li>
+<a href=/ros2-cli/docs/typedoc/modules/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-ros2-clidocstypedocmodules><span>ros2-cli</span></a>
 </li>
 </ul>
 </li>
@@ -114,36 +116,22 @@ Type declaration    Name Type     args? string[]   name string   outputPath? str
 </aside>
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a href=https://github.com/dooomit/ros2-cli/tree/master/content/en/docs/typedoc/modules.md class=td-page-meta--view target=_blank rel=noopener><i class="fa fa-file-alt fa-fw"></i> View page source</a>
-<a href=https://github.com/dooomit/ros2-cli/edit/master/content/en/docs/typedoc/modules.md class=td-page-meta--edit target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> Edit this page</a>
-<a href="https://github.com/dooomit/ros2-cli/new/master/content/en/docs/typedoc/modules.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" class=td-page-meta--child target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> Create child page</a>
-<a href="https://github.com/dooomit/ros2-cli/issues/new?title=ros2-cli%20-%20v1.0.0" class=td-page-meta--issue target=_blank rel=noopener><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
-<a id=print href=https://dooomit.github.io/ros2-cli/docs/typedoc/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
+<a href=https://github.com/dooomit/ros2-cli/tree/master/content/en/docs/typedoc/modules/commands_run.md class=td-page-meta--view target=_blank rel=noopener><i class="fa fa-file-alt fa-fw"></i> View page source</a>
+<a href=https://github.com/dooomit/ros2-cli/edit/master/content/en/docs/typedoc/modules/commands_run.md class=td-page-meta--edit target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/dooomit/ros2-cli/new/master/content/en/docs/typedoc/modules/commands_run.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" class=td-page-meta--child target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> Create child page</a>
+<a href="https://github.com/dooomit/ros2-cli/issues/new?title=Module:%20commands/run" class=td-page-meta--issue target=_blank rel=noopener><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a id=print href=https://dooomit.github.io/ros2-cli/docs/typedoc/modules/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
 </div>
 <div class=td-toc><nav id=TableOfContents>
 <ul>
 <li><a href=#table-of-contents>Table of contents</a>
 <ul>
-<li><a href=#interfaces>Interfaces</a></li>
-<li><a href=#type-aliases>Type aliases</a></li>
 <li><a href=#functions>Functions</a></li>
-</ul>
-</li>
-<li><a href=#type-aliases-1>Type aliases</a>
-<ul>
-<li><a href=#component>Component</a></li>
-<li><a href=#options>Options</a></li>
 </ul>
 </li>
 <li><a href=#functions-1>Functions</a>
 <ul>
-<li><a href=#build>build</a></li>
-<li><a href=#pathexists>pathExists</a></li>
-<li><a href=#readyaml>readYAML</a></li>
 <li><a href=#run>run</a></li>
-<li><a href=#selectcomponents>selectComponents</a></li>
-<li><a href=#spawncommand>spawnCommand</a></li>
-<li><a href=#validateenvironment>validateEnvironment</a></li>
 </ul>
 </li>
 </ul>
@@ -158,103 +146,26 @@ Type declaration    Name Type     args? string[]   name string   outputPath? str
 <li class=breadcrumb-item>
 <a href=https://dooomit.github.io/ros2-cli/docs/typedoc/>Readme</a>
 </li>
+<li class=breadcrumb-item>
+<a href=https://dooomit.github.io/ros2-cli/docs/typedoc/modules/>Modules</a>
+</li>
 <li class="breadcrumb-item active" aria-current=page>
-<a href=https://dooomit.github.io/ros2-cli/docs/typedoc/modules/>ros2-cli - v1.0.0</a>
+<a href=https://dooomit.github.io/ros2-cli/docs/typedoc/modules/commands_run/>commands/run</a>
 </li>
 </ol>
 </nav>
 <div class=td-content>
-<h1>ros2-cli - v1.0.0</h1>
+<h1>Module: commands/run</h1>
 <header class=article-meta>
 </header>
 <h2 id=table-of-contents>Table of contents</h2>
-<h3 id=interfaces>Interfaces</h3>
-<ul>
-<li><a href=interfaces/SpawnCommandOptions.md>SpawnCommandOptions</a></li>
-</ul>
-<h3 id=type-aliases>Type aliases</h3>
-<ul>
-<li><a href=modules.md#component>Component</a></li>
-<li><a href=modules.md#options>Options</a></li>
-</ul>
 <h3 id=functions>Functions</h3>
 <ul>
-<li><a href=modules.md#build>build</a></li>
-<li><a href=modules.md#pathexists>pathExists</a></li>
-<li><a href=modules.md#readyaml>readYAML</a></li>
-<li><a href=modules.md#run>run</a></li>
-<li><a href=modules.md#selectcomponents>selectComponents</a></li>
-<li><a href=modules.md#spawncommand>spawnCommand</a></li>
-<li><a href=modules.md#validateenvironment>validateEnvironment</a></li>
+<li><a href=commands_run.md#run>run</a></li>
 </ul>
-<h2 id=type-aliases-1>Type aliases</h2>
-<h3 id=component>Component</h3>
-<p>Ƭ <strong>Component</strong>: <code>Object</code></p>
-<p>defines the structure of components</p>
-<h4 id=type-declaration>Type declaration</h4>
-<table>
-<thead>
-<tr>
-<th style=text-align:left>Name</th>
-<th style=text-align:left>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style=text-align:left><code>args?</code></td>
-<td style=text-align:left><code>string</code>[]</td>
-</tr>
-<tr>
-<td style=text-align:left><code>name</code></td>
-<td style=text-align:left><code>string</code></td>
-</tr>
-<tr>
-<td style=text-align:left><code>outputPath?</code></td>
-<td style=text-align:left><code>string</code></td>
-</tr>
-<tr>
-<td style=text-align:left><code>program</code></td>
-<td style=text-align:left><code>string</code></td>
-</tr>
-<tr>
-<td style=text-align:left><code>restartOnError?</code></td>
-<td style=text-align:left><code>boolean</code></td>
-</tr>
-</tbody>
-</table>
-<h4 id=defined-in>Defined in</h4>
-<p>common/types.ts:5</p>
-<hr>
-<h3 id=options>Options</h3>
-<p>Ƭ <strong>Options</strong>: <code>Object</code></p>
-<p>defines the structure of command options</p>
-<h4 id=type-declaration-1>Type declaration</h4>
-<table>
-<thead>
-<tr>
-<th style=text-align:left>Name</th>
-<th style=text-align:left>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style=text-align:left><code>interactive</code></td>
-<td style=text-align:left><code>boolean</code></td>
-</tr>
-<tr>
-<td style=text-align:left><code>validation</code></td>
-<td style=text-align:left><code>boolean</code></td>
-</tr>
-</tbody>
-</table>
-<h4 id=defined-in-1>Defined in</h4>
-<p>common/types.ts:16</p>
 <h2 id=functions-1>Functions</h2>
-<h3 id=build>build</h3>
-<p>▸ <strong>build</strong>(<code>configPath</code>, <code>options</code>): <code>Promise</code>&lt;<code>void</code>></p>
-<p>This function executes the build</p>
-<p><strong><code>example</code></strong>
-build('./config')</p>
+<h3 id=run>run</h3>
+<p>▸ <strong>run</strong>(<code>configPath</code>, <code>options</code>): <code>Promise</code>&lt;<code>void</code>></p>
 <h4 id=parameters>Parameters</h4>
 <table>
 <thead>
@@ -272,184 +183,15 @@ build('./config')</p>
 </tr>
 <tr>
 <td style=text-align:left><code>options</code></td>
-<td style=text-align:left><a href=modules.md#options><code>Options</code></a></td>
+<td style=text-align:left><code>any</code></td>
 <td style=text-align:left>command options</td>
 </tr>
 </tbody>
 </table>
 <h4 id=returns>Returns</h4>
 <p><code>Promise</code>&lt;<code>void</code>></p>
-<h4 id=defined-in-2>Defined in</h4>
-<p>commands/build.ts:15</p>
-<hr>
-<h3 id=pathexists>pathExists</h3>
-<p>▸ <strong>pathExists</strong>(<code>path</code>): <code>Promise</code>&lt;<code>boolean</code>></p>
-<p>checks if a path exists</p>
-<h4 id=parameters-1>Parameters</h4>
-<table>
-<thead>
-<tr>
-<th style=text-align:left>Name</th>
-<th style=text-align:left>Type</th>
-<th style=text-align:left>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style=text-align:left><code>path</code></td>
-<td style=text-align:left><code>string</code></td>
-<td style=text-align:left>path to check</td>
-</tr>
-</tbody>
-</table>
-<h4 id=returns-1>Returns</h4>
-<p><code>Promise</code>&lt;<code>boolean</code>></p>
-<ul>
-<li>The output of the command</li>
-</ul>
-<h4 id=defined-in-3>Defined in</h4>
-<p>utils/pathExists.ts:8</p>
-<hr>
-<h3 id=readyaml>readYAML</h3>
-<p>▸ <strong>readYAML</strong>(<code>path</code>): <code>Promise</code>&lt;<code>any</code>></p>
-<p><strong><code>example</code></strong>
-readYaml('./myFile')</p>
-<h4 id=parameters-2>Parameters</h4>
-<table>
-<thead>
-<tr>
-<th style=text-align:left>Name</th>
-<th style=text-align:left>Type</th>
-<th style=text-align:left>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style=text-align:left><code>path</code></td>
-<td style=text-align:left><code>string</code></td>
-<td style=text-align:left>location of file to read</td>
-</tr>
-</tbody>
-</table>
-<h4 id=returns-2>Returns</h4>
-<p><code>Promise</code>&lt;<code>any</code>></p>
-<ul>
-<li>parsed file content</li>
-</ul>
-<h4 id=defined-in-4>Defined in</h4>
-<p>utils/readYAML.ts:13</p>
-<hr>
-<h3 id=run>run</h3>
-<p>▸ <strong>run</strong>(<code>configPath</code>, <code>options</code>): <code>Promise</code>&lt;<code>void</code>></p>
-<h4 id=parameters-3>Parameters</h4>
-<table>
-<thead>
-<tr>
-<th style=text-align:left>Name</th>
-<th style=text-align:left>Type</th>
-<th style=text-align:left>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style=text-align:left><code>configPath</code></td>
-<td style=text-align:left><code>string</code></td>
-<td style=text-align:left>the path of the config used</td>
-</tr>
-<tr>
-<td style=text-align:left><code>options</code></td>
-<td style=text-align:left><a href=modules.md#options><code>Options</code></a></td>
-<td style=text-align:left>command options</td>
-</tr>
-</tbody>
-</table>
-<h4 id=returns-3>Returns</h4>
-<p><code>Promise</code>&lt;<code>void</code>></p>
-<h4 id=defined-in-5>Defined in</h4>
-<p>commands/run.ts:31</p>
-<hr>
-<h3 id=selectcomponents>selectComponents</h3>
-<p>▸ <strong>selectComponents</strong>(<code>components</code>): <code>Promise</code>&lt;<a href=modules.md#component><code>Component</code></a>[]></p>
-<p>Provides a interactive prompt to select components</p>
-<h4 id=parameters-4>Parameters</h4>
-<table>
-<thead>
-<tr>
-<th style=text-align:left>Name</th>
-<th style=text-align:left>Type</th>
-<th style=text-align:left>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style=text-align:left><code>components</code></td>
-<td style=text-align:left><a href=modules.md#component><code>Component</code></a>[]</td>
-<td style=text-align:left>list of components</td>
-</tr>
-</tbody>
-</table>
-<h4 id=returns-4>Returns</h4>
-<p><code>Promise</code>&lt;<a href=modules.md#component><code>Component</code></a>[]></p>
-<h4 id=defined-in-6>Defined in</h4>
-<p>utils/selectComponents.ts:8</p>
-<hr>
-<h3 id=spawncommand>spawnCommand</h3>
-<p>▸ <strong>spawnCommand</strong>(<code>options</code>): <code>Promise</code>&lt;<code>void</code>></p>
-<p>This function spawns a shell executing a program</p>
-<p><strong><code>example</code></strong></p>
-<pre><code>spawnCommand({'cat myFile', myCallback(options), ['--verbose'], 'myCommand', 'logs', myErrorHandler(options)})
-</code></pre>
-<h4 id=parameters-5>Parameters</h4>
-<table>
-<thead>
-<tr>
-<th style=text-align:left>Name</th>
-<th style=text-align:left>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style=text-align:left><code>options</code></td>
-<td style=text-align:left><a href=interfaces/SpawnCommandOptions.md><code>SpawnCommandOptions</code></a></td>
-</tr>
-</tbody>
-</table>
-<h4 id=returns-5>Returns</h4>
-<p><code>Promise</code>&lt;<code>void</code>></p>
-<ul>
-<li>The output of the command</li>
-</ul>
-<h4 id=defined-in-7>Defined in</h4>
-<p>utils/spawnCommand.ts:25</p>
-<hr>
-<h3 id=validateenvironment>validateEnvironment</h3>
-<p>▸ <strong>validateEnvironment</strong>(<code>pythonCommand?</code>, <code>pythonVersion?</code>): <code>Promise</code>&lt;<code>void</code>></p>
-<p>This function checks if all required binaries for build are available</p>
-<p><strong><code>example</code></strong>
-validateEnvironment(')</p>
-<h4 id=parameters-6>Parameters</h4>
-<table>
-<thead>
-<tr>
-<th style=text-align:left>Name</th>
-<th style=text-align:left>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style=text-align:left><code>pythonCommand?</code></td>
-<td style=text-align:left><code>string</code></td>
-</tr>
-<tr>
-<td style=text-align:left><code>pythonVersion?</code></td>
-<td style=text-align:left><code>string</code></td>
-</tr>
-</tbody>
-</table>
-<h4 id=returns-6>Returns</h4>
-<p><code>Promise</code>&lt;<code>void</code>></p>
-<h4 id=defined-in-8>Defined in</h4>
-<p>utils/validateEnvironment.ts:13</p>
+<h4 id=defined-in>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/885bf66/src/commands/run.ts#L21>run.ts:21</a></p>
 <style>.feedback--answer{display:inline-block}.feedback--answer-no{margin-left:1em}.feedback--response{display:none;margin-top:1em}.feedback--response__visible{display:block}</style>
 <div class=d-print-none>
 <h2 class=feedback--title>Feedback</h2>
@@ -466,7 +208,7 @@ Sorry to hear that. Please <a href=https://github.com/USERNAME/REPOSITORY/issues
 <script>const yesButton=document.querySelector('.feedback--answer-yes'),noButton=document.querySelector('.feedback--answer-no'),yesResponse=document.querySelector('.feedback--response-yes'),noResponse=document.querySelector('.feedback--response-no'),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=b=>{if(typeof ga!='function')return;const a={command:'send',hitType:'event',category:'Helpful',action:'click',label:window.location.pathname,value:b};ga(a.command,a.hitType,a.category,a.action,a.label,a.value)};yesButton.addEventListener('click',()=>{yesResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(1)}),noButton.addEventListener('click',()=>{noResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(0)})</script>
 <br>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified February 13, 2022: <a href=https://github.com/dooomit/ros2-cli/commit/3932381f5f887d30075159dc89467f02b9950918>Monorepo (3932381)</a>
+Last modified February 13, 2022: <a href=https://github.com/dooomit/ros2-cli/commit/4a35f75add8cc28d2eaf6f68a153cb323df5a896>Use docsy (4a35f75)</a>
 </div>
 </div>
 </main>
