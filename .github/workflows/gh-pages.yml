@@ -41,6 +41,7 @@ jobs:
       - name: Build
         run: |
           cp ./cli/package.json .
+          cp ./cli/package-lock.json .
           npm ci
           npm install -g postcss-cli
           npm install -g autoprefixer
