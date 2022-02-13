@@ -1,5 +1,5 @@
 ---
-title: "ROS2 CLI Documentation"
+title: "CLI Documentation"
 linkTitle: "Documentation"
 menu:
   main:
