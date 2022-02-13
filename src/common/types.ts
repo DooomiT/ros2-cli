@@ -8,3 +8,8 @@ export type Component = {
     program: string,
     args?: string[]
 }
+
+export type Options = {
+    interactive: boolean,
+    validation: boolean
+}

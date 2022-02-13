@@ -3,7 +3,7 @@ import {selectComponents} from '../utils/selectComponents';
 import {spawnCommand} from '../utils/spawnCommand';
 import {validateEnvironment} from '../utils/validateEnvironment';
 
-import {Component} from '../common/types';
+import {Component, Options} from '../common/types';
 
 /**
  *
@@ -20,7 +20,7 @@ function componentCallback(scriptOutput: string, code:number, name?:string) {
  * @param {string} configPath - the path of the config used
  * @param {any} options - command options
  */
-export async function run(configPath: string, options: any) {
+export async function run(configPath: string, options: Options) {
   const configData = await readYAML(configPath);
   if (options.validation) {
     if (configData.common.pythonCommand && configData.common.pythonVersion) {
