@@ -162,10 +162,11 @@ This is the multi-page printable view of this section.
 </tbody>
 </table>
 <h4 id=defined-in>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/c34bab1/src/common/types.ts#L5>common/types.ts:5</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/common/types.ts#L5>common/types.ts:5</a></p>
 <hr>
 <h3 id=options>Options</h3>
 <p>Ƭ <strong>Options</strong>: <code>Object</code></p>
+<p>defines the structure of command options</p>
 <h4 id=type-declaration-1>Type declaration</h4>
 <table>
 <thead>
@@ -186,7 +187,7 @@ This is the multi-page printable view of this section.
 </tbody>
 </table>
 <h4 id=defined-in-1>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/c34bab1/src/common/types.ts#L12>common/types.ts:12</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/common/types.ts#L15>common/types.ts:15</a></p>
 <h2 id=functions-1>Functions</h2>
 <h3 id=build>build</h3>
 <p>▸ <strong>build</strong>(<code>configPath</code>, <code>options</code>): <code>Promise</code>&lt;<code>void</code>></p>
@@ -210,7 +211,7 @@ build('./config')</p>
 </tr>
 <tr>
 <td style=text-align:left><code>options</code></td>
-<td style=text-align:left><code>any</code></td>
+<td style=text-align:left><a href=modules.md#options><code>Options</code></a></td>
 <td style=text-align:left>command options</td>
 </tr>
 </tbody>
@@ -218,7 +219,7 @@ build('./config')</p>
 <h4 id=returns>Returns</h4>
 <p><code>Promise</code>&lt;<code>void</code>></p>
 <h4 id=defined-in-2>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/c34bab1/src/commands/build.ts#L15>commands/build.ts:15</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/commands/build.ts#L15>commands/build.ts:15</a></p>
 <hr>
 <h3 id=pathexists>pathExists</h3>
 <p>▸ <strong>pathExists</strong>(<code>path</code>): <code>Promise</code>&lt;<code>boolean</code>></p>
@@ -246,7 +247,7 @@ build('./config')</p>
 <li>The output of the command</li>
 </ul>
 <h4 id=defined-in-3>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/c34bab1/src/utils/pathExists.ts#L8>utils/pathExists.ts:8</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/pathExists.ts#L8>utils/pathExists.ts:8</a></p>
 <hr>
 <h3 id=readyaml>readYAML</h3>
 <p>▸ <strong>readYAML</strong>(<code>path</code>): <code>Promise</code>&lt;<code>any</code>></p>
@@ -275,7 +276,7 @@ readYaml('./myFile')</p>
 <li>parsed file content</li>
 </ul>
 <h4 id=defined-in-4>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/c34bab1/src/utils/readYAML.ts#L13>utils/readYAML.ts:13</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/readYAML.ts#L13>utils/readYAML.ts:13</a></p>
 <hr>
 <h3 id=run>run</h3>
 <p>▸ <strong>run</strong>(<code>configPath</code>, <code>options</code>): <code>Promise</code>&lt;<code>void</code>></p>
@@ -304,7 +305,7 @@ readYaml('./myFile')</p>
 <h4 id=returns-3>Returns</h4>
 <p><code>Promise</code>&lt;<code>void</code>></p>
 <h4 id=defined-in-5>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/c34bab1/src/commands/run.ts#L23>commands/run.ts:23</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/commands/run.ts#L23>commands/run.ts:23</a></p>
 <hr>
 <h3 id=selectcomponents>selectComponents</h3>
 <p>▸ <strong>selectComponents</strong>(<code>components</code>): <code>Promise</code>&lt;<a href=modules.md#component><code>Component</code></a>[]></p>
@@ -329,7 +330,7 @@ readYaml('./myFile')</p>
 <h4 id=returns-4>Returns</h4>
 <p><code>Promise</code>&lt;<a href=modules.md#component><code>Component</code></a>[]></p>
 <h4 id=defined-in-6>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/c34bab1/src/utils/selectComponents.ts#L8>utils/selectComponents.ts:8</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/selectComponents.ts#L8>utils/selectComponents.ts:8</a></p>
 <hr>
 <h3 id=spawncommand>spawnCommand</h3>
 <p>▸ <strong>spawnCommand</strong>(<code>command</code>, <code>callback</code>, <code>args?</code>, <code>name?</code>, <code>outputPath?</code>): <code>Promise</code>&lt;<code>void</code>></p>
@@ -380,7 +381,7 @@ readYaml('./myFile')</p>
 <li>The output of the command</li>
 </ul>
 <h4 id=defined-in-7>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/c34bab1/src/utils/spawnCommand.ts#L20>utils/spawnCommand.ts:20</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/spawnCommand.ts#L20>utils/spawnCommand.ts:20</a></p>
 <hr>
 <h3 id=validateenvironment>validateEnvironment</h3>
 <p>▸ <strong>validateEnvironment</strong>(<code>pythonCommand?</code>, <code>pythonVersion?</code>): <code>Promise</code>&lt;<code>void</code>></p>
@@ -409,7 +410,7 @@ validateEnvironment(')</p>
 <h4 id=returns-6>Returns</h4>
 <p><code>Promise</code>&lt;<code>void</code>></p>
 <h4 id=defined-in-8>Defined in</h4>
-<p><a href=https://github.com/DooomiT/ros2-cli/blob/c34bab1/src/utils/validateEnvironment.ts#L22>utils/validateEnvironment.ts:22</a></p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/21bd40a/src/utils/validateEnvironment.ts#L22>utils/validateEnvironment.ts:22</a></p>
 </div>
 </main>
 </div>
