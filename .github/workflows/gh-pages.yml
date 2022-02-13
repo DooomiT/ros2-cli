@@ -45,7 +45,7 @@ jobs:
           npm ci
           npm install -g postcss-cli
           npm install -g autoprefixer
-          cd docs
+          cd ../docs
           hugo --minify
         working-directory: ${{ env.working_directory }}
 
