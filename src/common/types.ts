@@ -9,6 +9,9 @@ export type Component = {
     args?: string[]
 }
 
+/**
+ * defines the structure of command options
+ */
 export type Options = {
     interactive: boolean,
     validation: boolean
