@@ -1,0 +1,72 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ROS2 CLI – Modules</title><link>https://dooomit.github.io/ros2-cli/docs/typedoc/modules/</link><description>Recent content in Modules on ROS2 CLI</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://dooomit.github.io/ros2-cli/docs/typedoc/modules/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Module: commands/build</title><link>https://dooomit.github.io/ros2-cli/docs/typedoc/modules/commands_build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dooomit.github.io/ros2-cli/docs/typedoc/modules/commands_build/</guid><description>
+&lt;h2 id="table-of-contents">Table of contents&lt;/h2>
+&lt;h3 id="functions">Functions&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="commands_build.md#build">build&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="functions-1">Functions&lt;/h2>
+&lt;h3 id="build">build&lt;/h3>
+&lt;p>▸ &lt;strong>build&lt;/strong>(&lt;code>configPath&lt;/code>, &lt;code>options&lt;/code>): &lt;code>Promise&lt;/code>&amp;lt;&lt;code>void&lt;/code>&amp;gt;&lt;/p>
+&lt;p>This function executes the build&lt;/p>
+&lt;p>&lt;strong>&lt;code>example&lt;/code>&lt;/strong>
+build('./config')&lt;/p>
+&lt;h4 id="parameters">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">Name&lt;/th>
+&lt;th style="text-align:left">Type&lt;/th>
+&lt;th style="text-align:left">Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>configPath&lt;/code>&lt;/td>
+&lt;td style="text-align:left">&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:left">the path of the config used&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>options&lt;/code>&lt;/td>
+&lt;td style="text-align:left">&lt;code>any&lt;/code>&lt;/td>
+&lt;td style="text-align:left">command options&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="returns">Returns&lt;/h4>
+&lt;p>&lt;code>Promise&lt;/code>&amp;lt;&lt;code>void&lt;/code>&amp;gt;&lt;/p>
+&lt;h4 id="defined-in">Defined in&lt;/h4>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/99e3a4f/src/commands/build.ts#L14">build.ts:14&lt;/a>&lt;/p></description></item><item><title>Docs: Module: commands/run</title><link>https://dooomit.github.io/ros2-cli/docs/typedoc/modules/commands_run/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://dooomit.github.io/ros2-cli/docs/typedoc/modules/commands_run/</guid><description>
+&lt;h2 id="table-of-contents">Table of contents&lt;/h2>
+&lt;h3 id="functions">Functions&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="commands_run.md#run">run&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="functions-1">Functions&lt;/h2>
+&lt;h3 id="run">run&lt;/h3>
+&lt;p>▸ &lt;strong>run&lt;/strong>(&lt;code>configPath&lt;/code>, &lt;code>options&lt;/code>): &lt;code>Promise&lt;/code>&amp;lt;&lt;code>void&lt;/code>&amp;gt;&lt;/p>
+&lt;h4 id="parameters">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">Name&lt;/th>
+&lt;th style="text-align:left">Type&lt;/th>
+&lt;th style="text-align:left">Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>configPath&lt;/code>&lt;/td>
+&lt;td style="text-align:left">&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:left">the path of the config used&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>options&lt;/code>&lt;/td>
+&lt;td style="text-align:left">&lt;code>any&lt;/code>&lt;/td>
+&lt;td style="text-align:left">command options&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="returns">Returns&lt;/h4>
+&lt;p>&lt;code>Promise&lt;/code>&amp;lt;&lt;code>void&lt;/code>&amp;gt;&lt;/p>
+&lt;h4 id="defined-in">Defined in&lt;/h4>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/99e3a4f/src/commands/run.ts#L21">run.ts:21&lt;/a>&lt;/p></description></item></channel></rss>
