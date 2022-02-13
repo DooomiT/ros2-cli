@@ -12,8 +12,6 @@ jobs:
     defaults:
       run:
         shell: bash
-    env:
-      working_directory: cli
 
     steps:
       - uses: actions/checkout@v2
@@ -42,12 +40,11 @@ jobs:
 
       - name: Build
         run: |
+          cp ./cli/package.json .
           npm ci
           npm install -g postcss-cli
           npm install -g autoprefixer
-          cd ../docs
           hugo --minify
-        working-directory: ${{ env.working_directory }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
