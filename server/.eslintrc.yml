@@ -16,3 +16,4 @@ rules:
   - error
   - code: 120
     tabWidth: 2
+  object-curly-spacing: true
