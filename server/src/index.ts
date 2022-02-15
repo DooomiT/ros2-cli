@@ -40,12 +40,13 @@ app.post('/config', async function (req: any, res: any) {
 
 io.sockets.on('connection', function (socket) {
   console.log('Connected')
-  socket.on('run', function (command: string) {
+  socket.on('run', async function (command: string) {
+    const commandOptions = { cwd: '../' }
     try {
       const splitCommand = command.split(' ');
       const program = splitCommand[0];
       const args = splitCommand.slice(1)
-      const child = childProcess.spawn(program, args);
+      const child = childProcess.spawn(program, args, commandOptions);
       child.stdout.setEncoding('utf-8');
       child.stdout.on('data', function (data) {
         socket.emit('process_data', data);
