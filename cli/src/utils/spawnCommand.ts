@@ -47,9 +47,7 @@ export async function spawnCommand(
     throw new Error(`path ${options.command} does not exist`);
   }
 
-  const child = options.args ?
-    childProcess.spawn(options.command) :
-    childProcess.spawn(options.command, options.args);
+  const child = childProcess.spawn(options.command, options.options);
 
   let commandOutput = '';
 

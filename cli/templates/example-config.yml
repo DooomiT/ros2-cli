@@ -4,11 +4,9 @@ common:
   pythonVersion: 3.9.10
 components:
   - name: baseSubscriber
-    outputPath: components/baseSubscriber
-    program: baseSubscriber.sh
-    args:
-      - -v
+    path: components/baseSubscriber
+    program: ros2 run baseSubscriber
     restartOnError: true
   - name: basePublisher
-    outputPath: components/basePublisher
-    program: basePublisher.sh
+    path: components/basePublisher
+    program: ros2 run basePublisher

@@ -1,7 +1,8 @@
-import { Component, Config, Options } from '../common/types';
+import { Component, Config, Options, SpawnCommandOptions } from '../common/types';
 import { selectComponents } from '../utils/selectComponents';
 import { validateEnvironment } from '../utils/validateEnvironment';
 import { readYAML } from '../utils/readYAML';
+import { spawnCommand } from '../utils/spawnCommand';
 
 /**
  * This function executes the build
@@ -22,6 +23,12 @@ export async function build(configPath: string, options: Options) {
     await selectComponents(configData.components) :
     configData.components;
   for (const component of usedComponents) {
-    console.info(component);
-  }
-};
+    const options: SpawnCommandOptions = {
+      command: `colcon build --packages-select ${component.name}`,
+      name: component.name,
+      outputPath: component.path,
+      options: { cwd: component.path },
+    };
+    await spawnCommand(options);
+  };
+}

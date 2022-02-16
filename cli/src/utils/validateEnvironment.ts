@@ -39,8 +39,7 @@ export async function validateEnvironment(config: Config) {
 
   if (config.common.pythonVersion) {
     const options: SpawnCommandOptions = {
-      command: `${config.common.pythonCommand}`,
-      args: ['--version'],
+      command: `${config.common.pythonCommand} --version`,
       callback: pythonCallback,
     };
     await spawnCommand(options);

@@ -1,12 +1,12 @@
+import * as childProcess from 'child_process';
 
 /**
  * defines the structure of components
  */
 export type Component = {
     name: string,
-    outputPath?: string
+    path?: string
     program: string,
-    args?: string[]
     restartOnError?: boolean,
 }
 
@@ -50,9 +50,9 @@ export type Config = {
 export interface SpawnCommandOptions {
     command: string,
     callback?: Function,
-    args?: string[],
     name?: string,
     outputPath?: string,
     errorCallback?: Function,
     restartOnError?: boolean,
+    options?: childProcess.SpawnOptionsWithoutStdio;
 }

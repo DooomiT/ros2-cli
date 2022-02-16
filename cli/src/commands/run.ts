@@ -43,8 +43,7 @@ export async function run(configPath: string, options: Options) {
       command: relCommand,
       callback: componentCallback,
       name: component.name,
-      outputPath: component.outputPath,
-      args: component.args,
+      outputPath: component.path,
       errorCallback: errorCallback,
       restartOnError: component.restartOnError,
     };
