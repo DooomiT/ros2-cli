@@ -12,7 +12,9 @@ slug: "modules"
 
 ### Type aliases
 
+- [Common](modules.md#common)
 - [Component](modules.md#component)
+- [Config](modules.md#config)
 - [Options](modules.md#options)
 
 ### Functions
@@ -26,6 +28,25 @@ slug: "modules"
 - [validateEnvironment](modules.md#validateenvironment)
 
 ## Type aliases
+
+### Common
+
+Ƭ **Common**: `Object`
+
+defines the structure of all common options
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `pythonCommand` | `string` |
+| `pythonVersion` | `string` |
+
+#### Defined in
+
+[common/types.ts:16](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L16)
+
+___
 
 ### Component
 
@@ -45,7 +66,27 @@ defines the structure of components
 
 #### Defined in
 
-common/types.ts:5
+[common/types.ts:5](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L5)
+
+___
+
+### Config
+
+Ƭ **Config**: `Object`
+
+defines the structure of the config
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `common` | [`Common`](modules.md#common) |
+| `components` | [`Component`](modules.md#component)[] |
+| `name` | `string` |
+
+#### Defined in
+
+[common/types.ts:32](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L32)
 
 ___
 
@@ -64,7 +105,7 @@ defines the structure of command options
 
 #### Defined in
 
-common/types.ts:16
+[common/types.ts:24](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L24)
 
 ## Functions
 
@@ -90,7 +131,7 @@ This function executes the build
 
 #### Defined in
 
-commands/build.ts:15
+[commands/build.ts:15](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/commands/build.ts#L15)
 
 ___
 
@@ -114,7 +155,7 @@ checks if a path exists
 
 #### Defined in
 
-utils/pathExists.ts:8
+[utils/pathExists.ts:8](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/utils/pathExists.ts#L8)
 
 ___
 
@@ -139,7 +180,7 @@ ___
 
 #### Defined in
 
-utils/readYAML.ts:13
+[utils/readYAML.ts:13](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/utils/readYAML.ts#L13)
 
 ___
 
@@ -160,7 +201,7 @@ ___
 
 #### Defined in
 
-commands/run.ts:31
+[commands/run.ts:31](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/commands/run.ts#L31)
 
 ___
 
@@ -182,7 +223,7 @@ Provides a interactive prompt to select components
 
 #### Defined in
 
-utils/selectComponents.ts:8
+[utils/selectComponents.ts:8](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/utils/selectComponents.ts#L8)
 
 ___
 
@@ -210,13 +251,13 @@ This function spawns a shell executing a program
 
 #### Defined in
 
-utils/spawnCommand.ts:25
+[utils/spawnCommand.ts:40](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/utils/spawnCommand.ts#L40)
 
 ___
 
 ### validateEnvironment
 
-▸ **validateEnvironment**(`pythonCommand?`, `pythonVersion?`): `Promise`<`void`\>
+▸ **validateEnvironment**(`config`): `Promise`<`void`\>
 
 This function checks if all required binaries for build are available
 
@@ -225,10 +266,9 @@ This function checks if all required binaries for build are available
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `pythonCommand?` | `string` |
-| `pythonVersion?` | `string` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `config` | [`Config`](modules.md#config) | the used python version |
 
 #### Returns
 
@@ -236,4 +276,4 @@ This function checks if all required binaries for build are available
 
 #### Defined in
 
-utils/validateEnvironment.ts:13
+[utils/validateEnvironment.ts:12](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/utils/validateEnvironment.ts#L12)

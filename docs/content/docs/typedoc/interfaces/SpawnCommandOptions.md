@@ -41,7 +41,7 @@ Invoked after the command execution stops on error
 
 #### Defined in
 
-common/types.ts:36
+[common/types.ts:53](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L53)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-common/types.ts:35
+[common/types.ts:52](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L52)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 #### Defined in
 
-common/types.ts:34
+[common/types.ts:51](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L51)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-common/types.ts:39
+[common/types.ts:56](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L56)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-common/types.ts:37
+[common/types.ts:54](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L54)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-common/types.ts:38
+[common/types.ts:55](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L55)
 
 ___
 
@@ -101,4 +101,4 @@ ___
 
 #### Defined in
 
-common/types.ts:40
+[common/types.ts:57](https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L57)
