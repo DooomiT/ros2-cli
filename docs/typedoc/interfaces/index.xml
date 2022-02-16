@@ -23,34 +23,34 @@ Invoked after the command execution stops on error&lt;/p>
 &lt;h3 id="args">args&lt;/h3>
 &lt;p>• &lt;code>Optional&lt;/code> &lt;strong>args&lt;/strong>: &lt;code>string&lt;/code>[]&lt;/p>
 &lt;h4 id="defined-in">Defined in&lt;/h4>
-&lt;p>common/types.ts:36&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L53">common/types.ts:53&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="callback">callback&lt;/h3>
 &lt;p>• &lt;code>Optional&lt;/code> &lt;strong>callback&lt;/strong>: &lt;code>Function&lt;/code>&lt;/p>
 &lt;h4 id="defined-in-1">Defined in&lt;/h4>
-&lt;p>common/types.ts:35&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L52">common/types.ts:52&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="command">command&lt;/h3>
 &lt;p>• &lt;strong>command&lt;/strong>: &lt;code>string&lt;/code>&lt;/p>
 &lt;h4 id="defined-in-2">Defined in&lt;/h4>
-&lt;p>common/types.ts:34&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L51">common/types.ts:51&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="errorcallback">errorCallback&lt;/h3>
 &lt;p>• &lt;code>Optional&lt;/code> &lt;strong>errorCallback&lt;/strong>: &lt;code>Function&lt;/code>&lt;/p>
 &lt;h4 id="defined-in-3">Defined in&lt;/h4>
-&lt;p>common/types.ts:39&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L56">common/types.ts:56&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="name">name&lt;/h3>
 &lt;p>• &lt;code>Optional&lt;/code> &lt;strong>name&lt;/strong>: &lt;code>string&lt;/code>&lt;/p>
 &lt;h4 id="defined-in-4">Defined in&lt;/h4>
-&lt;p>common/types.ts:37&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L54">common/types.ts:54&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="outputpath">outputPath&lt;/h3>
 &lt;p>• &lt;code>Optional&lt;/code> &lt;strong>outputPath&lt;/strong>: &lt;code>string&lt;/code>&lt;/p>
 &lt;h4 id="defined-in-5">Defined in&lt;/h4>
-&lt;p>common/types.ts:38&lt;/p>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L55">common/types.ts:55&lt;/a>&lt;/p>
 &lt;hr>
 &lt;h3 id="restartonerror">restartOnError&lt;/h3>
 &lt;p>• &lt;code>Optional&lt;/code> &lt;strong>restartOnError&lt;/strong>: &lt;code>boolean&lt;/code>&lt;/p>
 &lt;h4 id="defined-in-6">Defined in&lt;/h4>
-&lt;p>common/types.ts:40&lt;/p></description></item></channel></rss>
+&lt;p>&lt;a href="https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L57">common/types.ts:57&lt;/a>&lt;/p></description></item></channel></rss>

@@ -145,37 +145,37 @@ Invoked after the command execution stops on error</p>
 <h3 id=args>args</h3>
 <p>• <code>Optional</code> <strong>args</strong>: <code>string</code>[]</p>
 <h4 id=defined-in>Defined in</h4>
-<p>common/types.ts:36</p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L53>common/types.ts:53</a></p>
 <hr>
 <h3 id=callback>callback</h3>
 <p>• <code>Optional</code> <strong>callback</strong>: <code>Function</code></p>
 <h4 id=defined-in-1>Defined in</h4>
-<p>common/types.ts:35</p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L52>common/types.ts:52</a></p>
 <hr>
 <h3 id=command>command</h3>
 <p>• <strong>command</strong>: <code>string</code></p>
 <h4 id=defined-in-2>Defined in</h4>
-<p>common/types.ts:34</p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L51>common/types.ts:51</a></p>
 <hr>
 <h3 id=errorcallback>errorCallback</h3>
 <p>• <code>Optional</code> <strong>errorCallback</strong>: <code>Function</code></p>
 <h4 id=defined-in-3>Defined in</h4>
-<p>common/types.ts:39</p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L56>common/types.ts:56</a></p>
 <hr>
 <h3 id=name>name</h3>
 <p>• <code>Optional</code> <strong>name</strong>: <code>string</code></p>
 <h4 id=defined-in-4>Defined in</h4>
-<p>common/types.ts:37</p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L54>common/types.ts:54</a></p>
 <hr>
 <h3 id=outputpath>outputPath</h3>
 <p>• <code>Optional</code> <strong>outputPath</strong>: <code>string</code></p>
 <h4 id=defined-in-5>Defined in</h4>
-<p>common/types.ts:38</p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L55>common/types.ts:55</a></p>
 <hr>
 <h3 id=restartonerror>restartOnError</h3>
 <p>• <code>Optional</code> <strong>restartOnError</strong>: <code>boolean</code></p>
 <h4 id=defined-in-6>Defined in</h4>
-<p>common/types.ts:40</p>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L57>common/types.ts:57</a></p>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-73a5a3d1b02aa7d44aefc8444ab2f7cd>2 - ros2-cli - v1.0.0</h1>
@@ -186,7 +186,9 @@ Invoked after the command execution stops on error</p>
 </ul>
 <h3 id=type-aliases>Type aliases</h3>
 <ul>
+<li><a href=modules.md#common>Common</a></li>
 <li><a href=modules.md#component>Component</a></li>
+<li><a href=modules.md#config>Config</a></li>
 <li><a href=modules.md#options>Options</a></li>
 </ul>
 <h3 id=functions>Functions</h3>
@@ -200,10 +202,35 @@ Invoked after the command execution stops on error</p>
 <li><a href=modules.md#validateenvironment>validateEnvironment</a></li>
 </ul>
 <h2 id=type-aliases-1>Type aliases</h2>
+<h3 id=common>Common</h3>
+<p>Ƭ <strong>Common</strong>: <code>Object</code></p>
+<p>defines the structure of all common options</p>
+<h4 id=type-declaration>Type declaration</h4>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Name</th>
+<th style=text-align:left>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>pythonCommand</code></td>
+<td style=text-align:left><code>string</code></td>
+</tr>
+<tr>
+<td style=text-align:left><code>pythonVersion</code></td>
+<td style=text-align:left><code>string</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id=defined-in>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L16>common/types.ts:16</a></p>
+<hr>
 <h3 id=component>Component</h3>
 <p>Ƭ <strong>Component</strong>: <code>Object</code></p>
 <p>defines the structure of components</p>
-<h4 id=type-declaration>Type declaration</h4>
+<h4 id=type-declaration-1>Type declaration</h4>
 <table>
 <thead>
 <tr>
@@ -234,13 +261,42 @@ Invoked after the command execution stops on error</p>
 </tr>
 </tbody>
 </table>
-<h4 id=defined-in>Defined in</h4>
-<p>common/types.ts:5</p>
+<h4 id=defined-in-1>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L5>common/types.ts:5</a></p>
+<hr>
+<h3 id=config>Config</h3>
+<p>Ƭ <strong>Config</strong>: <code>Object</code></p>
+<p>defines the structure of the config</p>
+<h4 id=type-declaration-2>Type declaration</h4>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Name</th>
+<th style=text-align:left>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left><code>common</code></td>
+<td style=text-align:left><a href=modules.md#common><code>Common</code></a></td>
+</tr>
+<tr>
+<td style=text-align:left><code>components</code></td>
+<td style=text-align:left><a href=modules.md#component><code>Component</code></a>[]</td>
+</tr>
+<tr>
+<td style=text-align:left><code>name</code></td>
+<td style=text-align:left><code>string</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id=defined-in-2>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L32>common/types.ts:32</a></p>
 <hr>
 <h3 id=options>Options</h3>
 <p>Ƭ <strong>Options</strong>: <code>Object</code></p>
 <p>defines the structure of command options</p>
-<h4 id=type-declaration-1>Type declaration</h4>
+<h4 id=type-declaration-3>Type declaration</h4>
 <table>
 <thead>
 <tr>
@@ -259,8 +315,8 @@ Invoked after the command execution stops on error</p>
 </tr>
 </tbody>
 </table>
-<h4 id=defined-in-1>Defined in</h4>
-<p>common/types.ts:16</p>
+<h4 id=defined-in-3>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/common/types.ts#L24>common/types.ts:24</a></p>
 <h2 id=functions-1>Functions</h2>
 <h3 id=build>build</h3>
 <p>▸ <strong>build</strong>(<code>configPath</code>, <code>options</code>): <code>Promise</code>&lt;<code>void</code>></p>
@@ -291,8 +347,8 @@ build('./config')</p>
 </table>
 <h4 id=returns>Returns</h4>
 <p><code>Promise</code>&lt;<code>void</code>></p>
-<h4 id=defined-in-2>Defined in</h4>
-<p>commands/build.ts:15</p>
+<h4 id=defined-in-4>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/commands/build.ts#L15>commands/build.ts:15</a></p>
 <hr>
 <h3 id=pathexists>pathExists</h3>
 <p>▸ <strong>pathExists</strong>(<code>path</code>): <code>Promise</code>&lt;<code>boolean</code>></p>
@@ -319,8 +375,8 @@ build('./config')</p>
 <ul>
 <li>The output of the command</li>
 </ul>
-<h4 id=defined-in-3>Defined in</h4>
-<p>utils/pathExists.ts:8</p>
+<h4 id=defined-in-5>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/utils/pathExists.ts#L8>utils/pathExists.ts:8</a></p>
 <hr>
 <h3 id=readyaml>readYAML</h3>
 <p>▸ <strong>readYAML</strong>(<code>path</code>): <code>Promise</code>&lt;<code>any</code>></p>
@@ -348,8 +404,8 @@ readYaml('./myFile')</p>
 <ul>
 <li>parsed file content</li>
 </ul>
-<h4 id=defined-in-4>Defined in</h4>
-<p>utils/readYAML.ts:13</p>
+<h4 id=defined-in-6>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/utils/readYAML.ts#L13>utils/readYAML.ts:13</a></p>
 <hr>
 <h3 id=run>run</h3>
 <p>▸ <strong>run</strong>(<code>configPath</code>, <code>options</code>): <code>Promise</code>&lt;<code>void</code>></p>
@@ -377,8 +433,8 @@ readYaml('./myFile')</p>
 </table>
 <h4 id=returns-3>Returns</h4>
 <p><code>Promise</code>&lt;<code>void</code>></p>
-<h4 id=defined-in-5>Defined in</h4>
-<p>commands/run.ts:31</p>
+<h4 id=defined-in-7>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/commands/run.ts#L31>commands/run.ts:31</a></p>
 <hr>
 <h3 id=selectcomponents>selectComponents</h3>
 <p>▸ <strong>selectComponents</strong>(<code>components</code>): <code>Promise</code>&lt;<a href=modules.md#component><code>Component</code></a>[]></p>
@@ -402,8 +458,8 @@ readYaml('./myFile')</p>
 </table>
 <h4 id=returns-4>Returns</h4>
 <p><code>Promise</code>&lt;<a href=modules.md#component><code>Component</code></a>[]></p>
-<h4 id=defined-in-6>Defined in</h4>
-<p>utils/selectComponents.ts:8</p>
+<h4 id=defined-in-8>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/utils/selectComponents.ts#L8>utils/selectComponents.ts:8</a></p>
 <hr>
 <h3 id=spawncommand>spawnCommand</h3>
 <p>▸ <strong>spawnCommand</strong>(<code>options</code>): <code>Promise</code>&lt;<code>void</code>></p>
@@ -431,11 +487,11 @@ readYaml('./myFile')</p>
 <ul>
 <li>The output of the command</li>
 </ul>
-<h4 id=defined-in-7>Defined in</h4>
-<p>utils/spawnCommand.ts:25</p>
+<h4 id=defined-in-9>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/utils/spawnCommand.ts#L40>utils/spawnCommand.ts:40</a></p>
 <hr>
 <h3 id=validateenvironment>validateEnvironment</h3>
-<p>▸ <strong>validateEnvironment</strong>(<code>pythonCommand?</code>, <code>pythonVersion?</code>): <code>Promise</code>&lt;<code>void</code>></p>
+<p>▸ <strong>validateEnvironment</strong>(<code>config</code>): <code>Promise</code>&lt;<code>void</code>></p>
 <p>This function checks if all required binaries for build are available</p>
 <p><strong><code>example</code></strong>
 validateEnvironment(')</p>
@@ -445,23 +501,21 @@ validateEnvironment(')</p>
 <tr>
 <th style=text-align:left>Name</th>
 <th style=text-align:left>Type</th>
+<th style=text-align:left>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style=text-align:left><code>pythonCommand?</code></td>
-<td style=text-align:left><code>string</code></td>
-</tr>
-<tr>
-<td style=text-align:left><code>pythonVersion?</code></td>
-<td style=text-align:left><code>string</code></td>
+<td style=text-align:left><code>config</code></td>
+<td style=text-align:left><a href=modules.md#config><code>Config</code></a></td>
+<td style=text-align:left>the used python version</td>
 </tr>
 </tbody>
 </table>
 <h4 id=returns-6>Returns</h4>
 <p><code>Promise</code>&lt;<code>void</code>></p>
-<h4 id=defined-in-8>Defined in</h4>
-<p>utils/validateEnvironment.ts:13</p>
+<h4 id=defined-in-10>Defined in</h4>
+<p><a href=https://github.com/DooomiT/ros2-cli/blob/67e338d/cli/src/utils/validateEnvironment.ts#L12>utils/validateEnvironment.ts:12</a></p>
 </div>
 </main>
 </div>
