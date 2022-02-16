@@ -1,7 +1,7 @@
-import {Component, Options} from '../common/types';
-import {selectComponents} from '../utils/selectComponents';
-import {validateEnvironment} from '../utils/validateEnvironment';
-import {readYAML} from '../utils/readYAML';
+import { Component, Config, Options } from '../common/types';
+import { selectComponents } from '../utils/selectComponents';
+import { validateEnvironment } from '../utils/validateEnvironment';
+import { readYAML } from '../utils/readYAML';
 
 /**
  * This function executes the build
@@ -13,13 +13,9 @@ import {readYAML} from '../utils/readYAML';
  *     build('./config')
  */
 export async function build(configPath: string, options: Options) {
-  const configData = await readYAML(configPath);
+  const configData = await readYAML(configPath) as Config;
   if (options.validation) {
-    if (configData.common.pythonCommand && configData.common.pythonVersion) {
-      await validateEnvironment(configData.common.pythonCommand, configData.common.pythonVersion);
-    } else {
-      await validateEnvironment();
-    }
+    validateEnvironment(configData);
     console.info('build environment is available'.green);
   }
   const usedComponents: Component[] = options.interactive ?

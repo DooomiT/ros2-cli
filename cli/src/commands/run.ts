@@ -1,16 +1,16 @@
-import {readYAML} from '../utils/readYAML';
-import {selectComponents} from '../utils/selectComponents';
-import {spawnCommand} from '../utils/spawnCommand';
-import {validateEnvironment} from '../utils/validateEnvironment';
+import { readYAML } from '../utils/readYAML';
+import { selectComponents } from '../utils/selectComponents';
+import { spawnCommand } from '../utils/spawnCommand';
+import { validateEnvironment } from '../utils/validateEnvironment';
 
-import {Component, Options, SpawnCommandOptions} from '../common/types';
+import { Component, Config, Options, SpawnCommandOptions } from '../common/types';
 
 /**
  *
  * @param {number} code - exit code of the script
  * @param {SpawnCommandOptions} options - options of the executed command
  */
-function componentCallback(code:number, options:SpawnCommandOptions) {
+function componentCallback(code: number, options: SpawnCommandOptions) {
   console.info(`${options.name} terminated with ${code}`);
 }
 
@@ -19,7 +19,7 @@ function componentCallback(code:number, options:SpawnCommandOptions) {
  * @param {string} exitData - error output of the script
  * @param {SpawnCommandOptions} options - options of the executed command
  */
-function errorCallback(exitData: string, options:SpawnCommandOptions) {
+function errorCallback(exitData: string, options: SpawnCommandOptions) {
   console.info(`${options.name} terminated with an error`);
 }
 
@@ -29,13 +29,9 @@ function errorCallback(exitData: string, options:SpawnCommandOptions) {
  * @param {any} options - command options
  */
 export async function run(configPath: string, options: Options) {
-  const configData = await readYAML(configPath);
+  const configData = await readYAML(configPath) as Config;
   if (options.validation) {
-    if (configData.common.pythonCommand && configData.common.pythonVersion) {
-      await validateEnvironment(configData.common.pythonCommand, configData.common.pythonVersion);
-    } else {
-      await validateEnvironment();
-    }
+    validateEnvironment(configData);
     console.info('build environment is available'.green);
   }
   const usedComponents: Component[] = options.interactive ?

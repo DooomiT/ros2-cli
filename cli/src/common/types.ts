@@ -11,11 +11,28 @@ export type Component = {
 }
 
 /**
+ * defines the structure of all common options
+ */
+export type Common = {
+    pythonCommand: string,
+    pythonVersion: string,
+}
+
+/**
  * defines the structure of command options
  */
 export type Options = {
     interactive: boolean,
     validation: boolean
+}
+
+/**
+ * defines the structure of the config
+ */
+export type Config = {
+    name: string,
+    common: Common,
+    components: Component[],
 }
 
 /**
@@ -32,10 +49,10 @@ export type Options = {
  */
 export interface SpawnCommandOptions {
     command: string,
-    callback?:Function,
+    callback?: Function,
     args?: string[],
     name?: string,
     outputPath?: string,
-    errorCallback?:Function,
+    errorCallback?: Function,
     restartOnError?: boolean,
 }

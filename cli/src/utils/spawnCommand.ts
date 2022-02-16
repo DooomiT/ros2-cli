@@ -1,14 +1,29 @@
 import * as childProcess from 'child_process';
 import * as path from 'path';
-import {pathExists} from './pathExists';
-import {writeFile, mkdir} from 'fs/promises';
-import {SpawnCommandOptions} from '../common/types';
+import { pathExists } from './pathExists';
+import { writeFile, mkdir } from 'fs/promises';
+import { SpawnCommandOptions } from '../common/types';
+
+/**
+ * Sets up the loging directory for the command
+ * @param {SpawnCommandOptions} options - options object
+ * @return {Promise<string | undefined>} - ouput file path or undefined
+ */
+async function setupLogDir(options: SpawnCommandOptions): Promise<string | undefined> {
+  if (options.outputPath) {
+    if (!await pathExists(options.outputPath)) {
+      await mkdir(options.outputPath, { recursive: true });
+    }
+    const outputFileName = options.name || options.command.replace(/[ &\/\\#,+()$~%.'":*?<>{}]/g, '');
+    return path.join(options.outputPath, outputFileName);
+  }
+}
 
 /**
  *
  * @param {SpawnCommandOptions} options
  */
-async function restartOnError(options:SpawnCommandOptions) {
+async function restartOnError(options: SpawnCommandOptions) {
   await spawnCommand(options);
 }
 
@@ -23,39 +38,33 @@ async function restartOnError(options:SpawnCommandOptions) {
  *     spawnCommand({'cat myFile', myCallback(options), ['--verbose'], 'myCommand', 'logs', myErrorHandler(options)})
  */
 export async function spawnCommand(
-    options: SpawnCommandOptions,
+  options: SpawnCommandOptions,
 ) {
-  let outputFile: string;
-  if (options.outputPath) {
-    if (!await pathExists(options.outputPath)) {
-      await mkdir(options.outputPath, {recursive: true});
-    }
-    const outputFileName = options.name || options.command.replace(/[ &\/\\#,+()$~%.'":*?<>{}]/g, '');
-    outputFile = path.join(options.outputPath, outputFileName);
-  }
+  const outputFile: string | undefined = await setupLogDir(options);
 
   console.log(`start ${options.command}`.green);
   if (!pathExists(options.command)) {
     throw new Error(`path ${options.command} does not exist`);
   }
-  const child = options.args ?
-  childProcess.spawn(options.command) :
-  childProcess.spawn(options.command, options.args);
 
-  let scriptOutput = '';
+  const child = options.args ?
+    childProcess.spawn(options.command) :
+    childProcess.spawn(options.command, options.args);
+
+  let commandOutput = '';
 
   child.stdout.setEncoding('utf8');
-  child.stdout.on('data', function(data) {
+  child.stdout.on('data', function (data) {
     console.log(`[${options.name}]: ${data}`);
-    data=data.toString();
-    scriptOutput+=data;
+    data = data.toString();
+    commandOutput += data;
   });
 
   child.stderr.setEncoding('utf8');
-  child.stderr.on('data', async function(data) {
-    scriptOutput+=data;
-    if (options.outputPath) {
-      await writeFile(outputFile, scriptOutput);
+  child.stderr.on('data', async function (data) {
+    commandOutput += data;
+    if (outputFile) {
+      await writeFile(outputFile, commandOutput);
     }
     console.error(`[${options.name}]: ${data}`.red);
     if (options.errorCallback) {
@@ -66,12 +75,21 @@ export async function spawnCommand(
     }
   });
 
-  child.on('close', async function(code) {
-    if (options.outputPath) {
-      await writeFile(outputFile, scriptOutput);
+  child.on('close', async function (code) {
+    if (outputFile) {
+      await writeFile(outputFile, commandOutput);
     }
     if (options.callback) {
-      options.callback(code, scriptOutput, options);
+      options.callback(code, commandOutput, options);
+    }
+  });
+
+  child.on('error', async function (code) {
+    if (options.errorCallback) {
+      options.errorCallback(code, options);
+    }
+    if (options.restartOnError) {
+      restartOnError(options);
     }
   });
 };

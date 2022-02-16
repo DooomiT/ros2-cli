@@ -1,5 +1,5 @@
-import {readFile} from 'fs/promises';
-import {pathExists} from './pathExists';
+import { readFile } from 'fs/promises';
+import { pathExists } from './pathExists';
 import YAML from 'yaml';
 
 /**

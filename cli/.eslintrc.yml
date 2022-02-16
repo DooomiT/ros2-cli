@@ -16,5 +16,7 @@ rules:
   - error
   - code: 120
     tabWidth: 2
-  object-curly-spacing: true
+  object-curly-spacing: 0
+  indent: 1
+  space-before-function-paren: 0
 
